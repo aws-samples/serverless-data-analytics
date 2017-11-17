@@ -20,16 +20,19 @@ In this section you will use the CloudFromation template to create Amazon RedShi
   https://s3-us-west-2.amazonaws.com/pluslabs/redshift-demo-cdov1.0.template
 ```
 6. Click **Next**
+
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
+
 7. Type a name *(e.g. RedshiftSpectrumLab)* for the **Stack Name**
 
-![IMAGE](quiver-image-url/5DBE9603B431254ABE298D2C5ABCD9B7.jpg =453x222)
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.39+PM.png)
 
 8. Enter the following **Parameters** for **Redshift Cluster Configuration**
 i. Choose 8multi-node* for **ClusterType**
 ii. Type *2* for the **NumberOfNodes**
 iii. For **NodeType** select *ds2.xlarge*
 
-![IMAGE](quiver-image-url/FD5FA63A642C11B9464E06A91BD5EBCD.jpg =349x135)
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
 
 9.  Enter the following **Parameters** for **Redshift Database Configuration**
  i. Type a name (e.g. dbadmin) for **MasterUserName**
@@ -37,27 +40,32 @@ iii. For **NodeType** select *ds2.xlarge*
  iii. Type the a name (e.g. taxidb) for **DatabaseName**
  iv. Type the IP address of your local machine for **ClientIP**
 
-![IMAGE](quiver-image-url/B4696A12788DACAB44CB30A8A9610635.jpg =353x110)
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.39.23+PM.png)
 
 10. Enter the following **Parameters** for **Glue Crawler Configuration**
 i. Type the name(e.g. taxi-spectrum-db) for **GlueCatalogDBName**
 ii. Type the name(e.g. csvCrawler) for **CSVCrawler**
 iii. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
+11. Click **Next**
 
-10. Click **Next**
-11. [Optional] In the **Tags** sub-sections in **Options** type a **Key** name *(e.g. Name)* and **Value** for key.
-12. Click **Next**
-13. Check **I acknowledge that AWS CloudFormation might create IAM resources.**
-14. Click **Create**
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.04+PM.png)
+
+12. [Optional] In the **Tags** sub-sections in **Options** type a **Key** name *(e.g. Name)* and **Value** for key.
+13. Click **Next**
+
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.31+PM.png)
+
+14. Check **I acknowledge that AWS CloudFormation might create IAM resources.**
+15. Click **Create**
 
 > **Note:** This is may take approximately 15 minutes 
 
-15. Ensure that status of the Amazon CloudFromation stack that you just create is **CREATE_COMPLETE**
-16. Select your Amazon CloudFormation stack *(RedshiftSpectrumLab)*
-17. Click on the **Outputs** tab
-18. Review the list of **Key** and thier **Value** which will look like the following. 
+16. Ensure that status of the Amazon CloudFromation stack that you just create is **CREATE_COMPLETE**
+17. Select your Amazon CloudFormation stack *(RedshiftSpectrumLab)*
+18. Click on the **Outputs** tab
+19. Review the list of **Key** and thier **Value** which will look like the following. 
 
-![IMAGE](quiver-image-url/D79E778950D5017888EF7B39D2F4A767.jpg =468x262)
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.30.42+PM.png)
 
 ---
 ## Running AWS Glue Crawlers - CSV & Parquet Crawler 
@@ -116,7 +124,8 @@ Now that you have created the schema, you can run queries on the data set and se
 ```
 
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 9.16.45 PM.png](quiver-image-url/BC09E3AC46F16F2055A1EEF0734292A5.png =1036x388)
+
+![Screen Shot 2017-11-14 at 9.16.45 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.16.45+PM.png)
 
 2.	Copy the following statement into the query pane, and then choose **Run Query** to get the total number of taxi rides for yellow cabs. 
 
@@ -124,7 +133,7 @@ Results for the above query look like the following:
     SELECT COUNT(1) as TotalCount FROM taxispectrum.taxi
 ````
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 9.25.23 PM.png](quiver-image-url/6E5D380BE04F4B59C90A2B0E403F7A94.png =400x113)
+![Screen Shot 2017-11-14 at 9.25.23 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.25.23+PM.png)
 
 3. Copy the following statement into the query pane, and then choose **Run Query** to query for the number of rides per vendor, along with the average fair amount for yellow taxi rides
 
@@ -141,8 +150,7 @@ Results for the above query look like the following:
     GROUP BY (1)
 ````
 Results for the above query look like the following:
-
-![Screen Shot 2017-11-14 at 9.46.55 PM.png](quiver-image-url/37C32AF182AE2812587C6AD76935DF02.png =1327x136)
+![Screen Shot 2017-11-14 at 9.46.55 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.46.55+PM.png)
 ---
 
 ## Querying partitioned data using Amazon Redshift Spectrum
@@ -158,7 +166,7 @@ Now that you have added the partition metadata to the Athena data catalog you ca
     SELECT count(1) as TotalCount from taxispectrum.ny_pub
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.08.50 PM.png](quiver-image-url/58242EF60ABE2C995A589AF7F3EBEEAC.png =368x93)
+![Screen Shot 2017-11-14 at 10.08.50 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.08.50+PM.png)
 
 >**Note:**
 > This query executes much faster because the data set is partitioned and it in optimal format - Apache Parquet (an open source columnar).
@@ -169,7 +177,7 @@ Results for the above query look like the following:
     SELECT YEAR, count(1) as TotalCount from taxispectrum.ny_pub GROUP BY YEAR
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.11.47 PM.png](quiver-image-url/4D1FF37E88598C346E95E2EF2E68493B.png =789x359)
+![Screen Shot 2017-11-14 at 10.11.47 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.11.47+PM.png)
 
 3. Copy the following statement into the query pane, and then choose **Run Query** to get the top 12 months by total number of rides across all the years
 
@@ -180,7 +188,7 @@ Results for the above query look like the following:
     ORDER BY (3) DESC LIMIT 12
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.13.54 PM.png](quiver-image-url/E7C8440B09253FD8944CFACC61407F34.png =1042x457)
+![Screen Shot 2017-11-14 at 10.13.54 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.13.54+PM.png)
 
 4. Copy the following statement into the query pane, and then choose **Run Query** to get the monthly ride counts per taxi time for the year 2016.
 
@@ -192,7 +200,7 @@ Results for the above query look like the following:
     ORDER BY (1), (2)
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.18.08 PM.png](quiver-image-url/360A77F070EECAD261E77D52EC2623A9.png =1094x610)
+![Screen Shot 2017-11-14 at 10.18.08 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.18.08+PM.png)
 
 5. Copy the following statement anywhere into the query pane, and then choose **Run Query**.
 
@@ -210,7 +218,7 @@ Results for the above query look like the following:
     ORDER BY MONTH
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.23.51 PM.png](quiver-image-url/75D9E296EB1C4523A917BA14575C1A1E.png =1491x646)
+![Screen Shot 2017-11-14 at 10.23.51 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.23.51+PM.png)
 ---
 ## License
 
