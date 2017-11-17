@@ -75,7 +75,7 @@ iii. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
 1. Open [AWS Management Console for Glue](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#)
 2. Go to AWS Glues Crawlers page by clicking on **Crawlers** in the navigation pane
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.02.40+PM.png)
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/Screen+Shot+2017-11-17+at+3.02.35+AM.png)
 
 3. Select the AWS Glue Crawler for CSV(e.g. csvCrawler)
 4. Click **Run crawler**
