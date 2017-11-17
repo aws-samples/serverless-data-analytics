@@ -133,6 +133,7 @@ Results for the above query look like the following:
     SELECT COUNT(1) as TotalCount FROM taxispectrum.taxi
 ````
 Results for the above query look like the following:
+
 ![Screen Shot 2017-11-14 at 9.25.23 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.25.23+PM.png)
 
 3. Copy the following statement into the query pane, and then choose **Run Query** to query for the number of rides per vendor, along with the average fair amount for yellow taxi rides
@@ -166,6 +167,7 @@ Now that you have added the partition metadata to the Athena data catalog you ca
     SELECT count(1) as TotalCount from taxispectrum.ny_pub
 ```
 Results for the above query look like the following:
+
 ![Screen Shot 2017-11-14 at 10.08.50 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.08.50+PM.png)
 
 >**Note:**
