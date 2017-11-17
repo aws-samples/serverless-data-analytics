@@ -117,7 +117,7 @@ The returned result will contain information for the partitions that are added t
 10. Ensure **Select All **is checked.
 11. Click on **Select buckets**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture1.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture1.png)
 
 
 12. Check the box for **Amazon S3 Storage Analytics **[Optional].
