@@ -16,13 +16,10 @@ In this section you will use the CloudFromation template to create Amazon RedShi
 
 1. Login in to your AWS console and open the [Amazon CloudFormation Dashboard](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2]) 
 2. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
+3. Download the Amazon [CloudFormation template](../Lab4/redshiftspectrumglue-lab4.template)
 3. Click **Create Stack**
-4. Select **Specify an Amazon S3 template URL**
-5. Type Amazon S3 URL of the Amazon CloudFromation Teamplate. 
-
-```
-  https://s3-us-west-2.amazonaws.com/pluslabs/redshift-demo-cdov1.0.template
-```
+4. Select **Upload a template to Amazon S3**
+5. Click on **Choose File** to select the downloaded Amazon CloudFromation template
 6. Click **Next**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
