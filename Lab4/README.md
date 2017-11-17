@@ -1,7 +1,7 @@
-#Lab 4: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
+# Lab 4: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
 ---
 
-##Architectural Diagram
+## Architectural Diagram
 ![architecture-overview-lab4.png](quiver-image-url/03C7313F9465CBA6924B923928100C80.png =548x290)
 
 ---
@@ -140,16 +140,16 @@ Results for the above query look like the following:
 
 2.	Copy the following statement into the query pane, and then choose **Run Query** to get the total number of taxi rides for yellow cabs. 
 
-````sql
+```sql
     SELECT COUNT(1) as TotalCount FROM taxispectrum.taxi
-````
+```
 Results for the above query look like the following:
 
 ![Screen Shot 2017-11-14 at 9.25.23 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.25.23+PM.png)
 
 3. Copy the following statement into the query pane, and then choose **Run Query** to query for the number of rides per vendor, along with the average fair amount for yellow taxi rides
 
-````sql
+```sql
     SELECT 
     CASE vendorid 
          WHEN '1' THEN 'Creative Mobile Technologies'
@@ -160,9 +160,10 @@ Results for the above query look like the following:
     FROM taxispectrum.taxi
     WHERE total_amount > 0
     GROUP BY (1)
-````
+```
 
 Results for the above query look like the following:
+
 ![Screen Shot 2017-11-14 at 9.46.55 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.46.55+PM.png)
 ---
 
@@ -233,6 +234,7 @@ Results for the above query look like the following:
 ```
 
 Results for the above query look like the following:
+
 ![Screen Shot 2017-11-14 at 10.23.51 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.23.51+PM.png)
 ---
 ## License
