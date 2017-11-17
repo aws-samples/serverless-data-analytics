@@ -1,5 +1,14 @@
 # Lab 4: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
 
+* [Deploying Amazon Redshift Cluster](#deploying-amazon-redshift-cluster)
+* [Running AWS Glue Crawlers](#running-aws-glue-crawlers---csv--parquet-crawler)
+* [Create Redshift Spectrum Scehma and reference external table form AWS Glue Data Catalog Database](#create-redshift-spectrum-scehma-and-reference-external-table-form-aws-glue-data-catalog-database)
+* [Querying data from Amazon S3 using Amazon Redshift Spectrum](#querying-data-from-amazon-s3-using-amazon-redshift-spectrum)
+* [Querying partitioned data using Amazon Redshift Spectrum](#querying-partitioned-data-using-amazon-redshift-spectrum)
+
+
+
+## Architectural Diagram
 ![architecture-overview-lab4.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-17+at+1.11.45+AM.png)
 
 ## Deploying Amazon Redshift Cluster 
