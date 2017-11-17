@@ -1,5 +1,16 @@
 # Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena
 
+*. [Creating Amazon Athena Database and Table](#creating-amazon-athena-database-and-table)
+    * [Create Athena Database](#create-database)
+    * [Create Athena Table](#create-a-table)  
+* [Querying data from Amazon S3 using Amazon Athena](#querying-data-from-amazon-s3-using-amazon-athena)
+* [Querying partitioned data using Amazon Athena](#querying-partitioned-data-using-amazon-athena)
+    * [Create Athena Table with Partitions](#create-a-table-with-partitions)
+    * [Adding partition metadata to Amazon Athena](#adding-partition-metadata-to-amazon-athena)
+    * [Querying partitioned data set](#querying-partitioned-data-set)
+*[Create an Amazon S3 bucket](#create-an-amazon-s3-bucket)
+    
+## Architectural Diagram
 ![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
 
 ## Creating Amazon Athena Database and Table 
