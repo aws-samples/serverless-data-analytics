@@ -1,10 +1,7 @@
 # Lab 4: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
----
 
 ## Architectural Diagram
 ![architecture-overview-lab4.png](quiver-image-url/03C7313F9465CBA6924B923928100C80.png =548x290)
-
----
 
 ## Deploying Amazon Redshift Cluster 
 
@@ -67,7 +64,6 @@ iii. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.30.42+PM.png)
 
----
 ## Running AWS Glue Crawlers - CSV & Parquet Crawler 
 1. Open [AWS Management Console for Glue](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#)
 2. Go to AWS Glues Crawlers page by clicking on **Crawlers** in the navigation pane
@@ -99,7 +95,6 @@ Now that you have run the crawlers lest ensure that new tables *taxi* and *ny_pu
 11. Click on **taxi** to review the table definition and schema 
 12. Navigate back and click on **ny_pub** to review the table definition and schema
 13. Click on **View partitions** to review the partition metadata
----
 
 ## Create Redshift Spectrum Scehma and reference external table form AWS Glue Data Catalog Database
 
@@ -165,7 +160,6 @@ Results for the above query look like the following:
 Results for the above query look like the following:
 
 ![Screen Shot 2017-11-14 at 9.46.55 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.46.55+PM.png)
----
 
 ## Querying partitioned data using Amazon Redshift Spectrum
 
@@ -236,6 +230,7 @@ Results for the above query look like the following:
 Results for the above query look like the following:
 
 ![Screen Shot 2017-11-14 at 10.23.51 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.23.51+PM.png)
+
 ---
 ## License
 

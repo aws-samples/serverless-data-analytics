@@ -258,8 +258,6 @@ Results for the above query look like the following:
 
 ![athenapercentilequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenapercentilequery-nytaxi.png)
 
----
-
 ## Create an Amazon S3 bucket
 
 1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
