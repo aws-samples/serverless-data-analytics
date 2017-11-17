@@ -71,6 +71,9 @@ iii. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
 ## Running AWS Glue Crawlers - CSV & Parquet Crawler 
 1. Open [AWS Management Console for Glue](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#)
 2. Go to AWS Glues Crawlers page by clicking on **Crawlers** in the navigation pane
+
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.02.40+PM.png)
+
 3. Select the AWS Glue Crawler for CSV(e.g. csvCrawler)
 4. Click **Run crawler**
 5. Select the AWS Glue Crawler for CSV(e.g. csvCrawler)
@@ -78,15 +81,23 @@ iii. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
 
 > Note: This may take approximately 5 min for both the crawlers to parse the data in CSV and Parquet format. 
 
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.08.23+PM.png)
+
 7. Wait for the **Status** of both the crawlers to *Ready* state
 
- Now that you have run the crawlers lest ensure that new tables *TaxiDataYellow* and *NYTaxiRides* been created. 
+Now that you have run the crawlers lest ensure that new tables *taxi* and *ny_pub* been created. 
 
 8. To to the list of databases in the AWS Glue Data Catalog click on **Databases** in the navigation pane.
 9. Click on **taxi-spectrum-db**
+
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.09.32+PM.png)
+
 10. Click on **Tables in taxi-spectrum-db**
-11. Click on **TaxiDataYellow** to review the table definition and schema 
-12. Navigate back and click on **NYTaxiRides** to review the table definition and schema
+
+![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.09.50+PM.png)
+
+11. Click on **taxi** to review the table definition and schema 
+12. Navigate back and click on **ny_pub** to review the table definition and schema
 13. Click on **View partitions** to review the partition metadata
 ---
 
