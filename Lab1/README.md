@@ -1,6 +1,6 @@
 # Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena
 
-*. [Creating Amazon Athena Database and Table](#creating-amazon-athena-database-and-table)
+* [Creating Amazon Athena Database and Table](#creating-amazon-athena-database-and-table)
     * [Create Athena Database](#create-database)
     * [Create Athena Table](#create-a-table)  
 * [Querying data from Amazon S3 using Amazon Athena](#querying-data-from-amazon-s3-using-amazon-athena)
