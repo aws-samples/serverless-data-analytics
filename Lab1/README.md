@@ -1,6 +1,6 @@
 # Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena
 
-![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/architecture-overview-lab1.png)
+![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
 
 ## Creating Amazon Athena Database and Table 
 

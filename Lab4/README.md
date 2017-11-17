@@ -1,5 +1,7 @@
 # Lab 4: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
 
+![architecture-overview-lab3.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-17+at+1.11.45+AM.png)
+
 ## Architectural Diagram
 ![architecture-overview-lab4.png](quiver-image-url/03C7313F9465CBA6924B923928100C80.png =548x290)
 
