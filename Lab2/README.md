@@ -73,7 +73,7 @@
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
 
 
-7. Select the mydatabase database.
+7. Select the **mydatabase** database.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight9.PNG)
 
@@ -96,7 +96,7 @@
 
     v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime filed** based on the specified formula.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight11.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight12.PNG)
 
 11. Choose **Save and Visualize** on top of the page.
 
@@ -116,9 +116,9 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Format 1,234.5678 **from the dropdown menu.
 
-   iii. Select **12345**.
+   iii. Select **1235**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight12.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight13.PNG)
 
 4. To add a filter on the **year** filed, 
 
@@ -126,7 +126,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field** from the dropdown menu.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight13.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight14.PNG)
 
 5. To filter the data only for the year 2016,
 
@@ -140,7 +140,7 @@ Now that you have configured the data source and created a new filed to represen
 
    v. Select **Close**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight14.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight15.PNG)
 
 ### Add the month based filter for the month of January
 
@@ -149,7 +149,7 @@ Now that you have configured the data source and created a new filed to represen
 3. Under the **Fields list**, deselect **year**by clicking on **year** field name.
 4. Select **month** by clicking on the **month** field name from the **Fields list**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight15.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight16.PNG)
 
 5. To filter the data set for the month of January (Month 1)
 
@@ -157,7 +157,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight16.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight17.PNG)
 
 6. To filter the data for month of January 2016 (Month 1),
 
@@ -171,7 +171,7 @@ Now that you have configured the data source and created a new filed to represen
 
    v. Select **Close**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight17.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight18.PNG)
 
 ### Visualize the data by hour of day for the month of January 2016
 
@@ -179,12 +179,12 @@ Now that you have configured the data source and created a new filed to represen
 2. Under the **Fields list**, deselect **month** by clicking on **month** field name.
 3. Select **hourofday** by clicking on the **hourofday** field name from the **Fields list**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight18.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight19.PNG)
 
 4. Change the visual type to a line chart by selecting the line chart icon highlighted in the screenshot below under **Visual types**.
 5. Using the slider on x-axis, select the entire range [0,23] for **hourofday** field.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight19.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight20.PNG)
 
 ### Visualize the data for the month of January 2016 for all taxi types(yellow, green, fhv)
 
@@ -193,13 +193,12 @@ Now that you have configured the data source and created a new filed to represen
 3. Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime **field name from **Fields list**.
 4. Select **type** for Color by clicking on the **type** field name from **Fields list.**
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight20.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight21.PNG)
 
 5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
 6. Select **Aggregate:Year **from the revealed sub-menu.
 7. Select **Day **to aggregate by day.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight21.PNG)
 
 8. Using the slider on x-axis, select the entire month of January 2016 for **pickup_datetime** field.
 
