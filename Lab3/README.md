@@ -222,11 +222,12 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
     and take note the Run Time and Data scanned numbers here. 
 
     ![glue13](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_13.PNG)
+    
     What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the uncompressed data from the previous section.
 
 
-Athena charges you by the amount of data scanned per query. You can save on costs and get better performance if you partition the data, compress data, or convert it to columnar formats such as Apache Parquet.
----
+> Note: Athena charges you by the amount of data scanned per query. You can save on costs and get better performance if you partition the data, compress data, or convert it to columnar formats such as Apache Parquet.
+
 ## License
 
 This library is licensed under the Apache 2.0 License. 
