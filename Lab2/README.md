@@ -2,7 +2,7 @@
 
 ## Creating Amazon Athena Database and Table
 
-> Note: If you have complete the [Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena](../Lab1) you skip this section. 
+> Note: If you have complete the [Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena](../Lab1) you skip this section and go to the next section [Signing up for Amazon Quicksight Standard Edition](#signing-up-for-amazon-quicksight-standard-edition)
 
 Amazon Athena uses Apache Hive to define tables and create databases. Databases are a logical grouping of tables. When you create a database and table in Athena, you are simply describing the schema and location of the table data in Amazon S3\. In case of Hive, databases and tables don’t store the data along with the schema definition unlike traditional relational database systems. The data is read from Amazon S3 only when you query the table. The other benefit of using Hive is that the metastore found in Hive can be used in many other big data applications such as Spark, Hadoop, and Presto. With Athena catalog, you can now have Hive-compatible metastore in the cloud without the need for provisioning a Hadoop cluster or RDS instance. For guidance on databases and tables creation refer [Apache Hive documentation](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL). The following steps provides guidance specifically for Amazon Athena.
 
@@ -251,7 +251,6 @@ Now that you have configured the data source and created a new filed to represen
 3. Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime **field name from **Fields list**.
 4. Select **type** for Color by clicking on the **type** field name from **Fields list.**
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight20.PNG)
 
 5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
 6. Select **Aggregate:Year **from the revealed sub-menu.
@@ -259,8 +258,6 @@ Now that you have configured the data source and created a new filed to represen
 
 
 8. Using the slider on x-axis, select the entire month of January 2016 for **pickup_datetime** field.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight21.PNG)
 
 > Using Amazon QuickSight, you were able to see patterns across a time-series data by building visualizations, performing ad-hoc analysis, and quickly generating insights.
 
