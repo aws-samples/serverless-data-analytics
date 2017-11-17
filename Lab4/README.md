@@ -18,9 +18,7 @@ In this section you will use the CloudFromation template to create Amazon RedShi
 2. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
 3. Right click on the link below and download the Amazon CloudFormation template - redshiftspectrumglue-lab4.template
 
-```
-[Amazon CloudFormation template - redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template)
-```
+    [Amazon CloudFormation template - redshiftspectrumglue-lab4.template]  
 
 4. Click **Create Stack**
 5. Select **Upload a template to Amazon S3**
