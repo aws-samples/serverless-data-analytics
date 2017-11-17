@@ -10,7 +10,7 @@
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight1.PNG)
 
-4. On the next page, for the subscription type select the **"standard Edition"** and click **Continue**. 
+4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight2.PNG)
 
@@ -43,12 +43,12 @@
 10. Ensure **Select All **is checked.
 11. Click on **Select buckets**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight6.PNG)
+
 
 12. Check the box for **Amazon S3 Storage Analytics **[Optional].
 13. Click **Apply**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight7.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight6.PNG)
 
 ## Configuring Amazon QuickSight to use Amazon Athena as data source
 
@@ -56,32 +56,34 @@
 
 1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight7.PNG)
+
 
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight9.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
 
 4. Select **Athena** as a Data source.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight10.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight9.PNG)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 6. Click **Create data source**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight11.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight10.PNG)
+
 
 7. Select the mydatabase database.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight12.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight11.PNG)
 
 8. Choose the **nytaxirides **table.
 9. Choose **Edit/Preview** data.
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight13.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight12.PNG)
 
 10. Under **Fields** on the left column, choose **New field**
 
@@ -95,7 +97,7 @@
 
     v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime filed** based on the specified formula.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight14.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight13.PNG)
 
 11. Choose **Save and Visualize** on top of the page.
 
@@ -117,7 +119,7 @@ Now that you have configured the data source and created a new filed to represen
 
    iii. Select **12345**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight15.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight14.PNG)
 
 4. To add a filter on the **year** filed, 
 
@@ -125,7 +127,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field** from the dropdown menu.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight16.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight15.PNG)
 
 5. To filter the data only for the year 2016,
 
@@ -139,7 +141,7 @@ Now that you have configured the data source and created a new filed to represen
 
    v. Select **Close**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight17.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight16.PNG)
 
 ### Add the month based filter for the month of January
 
@@ -148,7 +150,7 @@ Now that you have configured the data source and created a new filed to represen
 3. Under the **Fields list**, deselect **year**by clicking on **year** field name.
 4. Select **month** by clicking on the **month** field name from the **Fields list**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight18.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight17.PNG)
 
 5. To filter the data set for the month of January (Month 1)
 
@@ -156,7 +158,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight19.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight18.PNG)
 
 6. To filter the data for month of January 2016 (Month 1),
 
@@ -170,7 +172,7 @@ Now that you have configured the data source and created a new filed to represen
 
    v. Select **Close**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight20.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight19.PNG)
 
 ### Visualize the data by hour of day for the month of January 2016
 
@@ -178,12 +180,12 @@ Now that you have configured the data source and created a new filed to represen
 2. Under the **Fields list**, deselect **month** by clicking on **month** field name.
 3. Select **hourofday** by clicking on the **hourofday** field name from the **Fields list**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight21.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight20.PNG)
 
 4. Change the visual type to a line chart by selecting the line chart icon highlighted in the screenshot below under **Visual types**.
 5. Using the slider on x-axis, select the entire range [0,23] for **hourofday** field.
 
-![]()
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight21.PNG)
 
 ### Visualize the data for the month of January 2016 for all taxi types(yellow, green, fhv)
 
@@ -211,14 +213,6 @@ Now that you have configured the data source and created a new filed to represen
 ## License
 
 This library is licensed under the Apache 2.0 License. 
-
-
-
-
-
-
-
-
 
 
 
