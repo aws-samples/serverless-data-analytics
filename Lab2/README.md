@@ -117,6 +117,7 @@ The returned result will contain information for the partitions that are added t
 10. Ensure **Select All **is checked.
 11. Click on **Select buckets**.
 
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture1.PNG)
 
 
 12. Check the box for **Amazon S3 Storage Analytics **[Optional].
@@ -136,10 +137,11 @@ The returned result will contain information for the partitions that are added t
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
-
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture2.PNG)
 
 4. Select **Athena** as a Data source.
 
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture3.PNG)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 6. Click **Create data source**.
@@ -200,7 +202,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field** from the dropdown menu.
 
-
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture4.PNG)
 
 5. To filter the data only for the year 2016,
 
@@ -267,13 +269,25 @@ Now that you have configured the data source and created a new filed to represen
 3. Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime **field name from **Fields list**.
 4. Select **type** for Color by clicking on the **type** field name from **Fields list.**
 
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture5.PNG)
 
 5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
 6. Select **Aggregate:Year **from the revealed sub-menu.
 7. Select **Day** to aggregate by day.
 
 
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture6.PNG)
+
+
 8. Using the slider on x-axis, select the entire month of January 2016 for **pickup_datetime** field.
+
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture7.PNG)
+
+> Note: The interesting outlier in the above graph is that on Jan23rd, 2016, you see the dip in the number of taxis across all types. Doing a quick google search for that date, gets us this weather article from NBC New York
+> ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture8.PNG)
+ 
+
 
 > Using Amazon QuickSight, you were able to see patterns across a time-series data by building visualizations, performing ad-hoc analysis, and quickly generating insights.
 

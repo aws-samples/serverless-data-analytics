@@ -7,7 +7,6 @@
 * [Querying partitioned data using Amazon Redshift Spectrum](#querying-partitioned-data-using-amazon-redshift-spectrum)
 
 
-
 ## Architectural Diagram
 ![architecture-overview-lab4.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-17+at+1.11.45+AM.png)
 
