@@ -1,6 +1,6 @@
 ## Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena
 
-![architecture-overview-lab1.png](quiver-image-url/2CBF08F38874918FAFA30A16A7D585BE.png =299x295)
+![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/architecture-overview-lab1.png)
 
 ### Creating Amazon Athena Database and Table
 
@@ -20,7 +20,7 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 
 6.	Ensure *mydatabase* appears in the DATABASE list on the **Catalog** dashboard
 
-![athenacatalog.png](quiver-image-url/64D8DB30E1CF4BBBDB874E258ECD02EA.png =432x157)
+![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
 
 ### Create a Table
 Now that you have a database, you are ready to create a table that is based on the New York taxi sample data. You define columns that map to the data, specify how the data is delimited, and provide the location in Amazon S3 for the file. 
@@ -68,7 +68,7 @@ Now that you have a database, you are ready to create a table that is based on t
 >-	You can also query data in regions other than the region where you are running Amazon Athena. Standard inter-region data transfer rates for Amazon S3 apply in addition to standard Amazon Athena charges. 
 >-	Ensure the table you just created appears on the Catalog dashboard for the selected database.
 
-![athenatablecreatequery-yellowtaxi.png](quiver-image-url/F60643BD978B7D6D67FFEFE7F965BAEA.png =442x177)
+![athenatablecreatequery-yellowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenatablecreatequery-yellowtaxi.png)
 
 ### Querying data from Amazon S3 using Amazon Athena
 
@@ -81,7 +81,7 @@ Now that you have created the table, you can run queries on the data set and see
 ````
 
 Results for the above query look like the following:
-![athenaselectquery-yellowtaxi.png](quiver-image-url/C6C16A953825F8D280893F3C26C7C4AD.png =457x161)
+![athenaselectquery-yellowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenaselectquery-yellowtaxi.png)
 
 2.	Choose **New Query**, copy the following statement into the query pane, and then choose **Run Query** to get the total number of taxi rides for yellow cabs. 
 
@@ -89,7 +89,7 @@ Results for the above query look like the following:
     SELECT COUNT(1) as TotalCount FROM TaxiDataYellow
 ````
 Results for the above query look like the following:
-![athenacountquery-yelllowtaxi.png](quiver-image-url/8DEC8A76794C41947D26F9DDE0BC7D3B.png =468x54)
+![athenacountquery-yelllowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacountquery-yelllowtaxi.png)
 
 >**Note:** 
 The current data format is CSV and this query is scanning **~207GB** of data and takes **~20.06** seconds to execute the query.
@@ -111,7 +111,7 @@ The current data format is CSV and this query is scanning **~207GB** of data and
     GROUP BY (1)
 ````
 Results for the above query look like the following:
-![athenacasequery-yelllowtaxi.png](quiver-image-url/755837FA22181D886BE539F31F8DDAA6.png =454x78)
+![athenacasequery-yelllowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacasequery-yelllowtaxi.png)
 
 ### Querying partitioned data using Amazon Athena
 
@@ -144,7 +144,7 @@ By partitioning your data, you can restrict the amount of data scanned by each q
 
 4.Ensure the table you just created appears on the Catalog dashboard for the selected database.
 
-![athenatablecreatequery-nytaxi.png](quiver-image-url/125417BEA3FE38BB4155F8242730CD6D.png =434x156)
+![athenatablecreatequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenatablecreatequery-nytaxi.png)
 
 >**Note:**
 >	Running the following sample query on the NYTaxiRides table you just created will not return any result as no metadata about the partition is added to the Amazon Athena table catalog.  
@@ -176,7 +176,7 @@ Now that you have added the partition metadata to the Athena data catalog you ca
     SELECT count(1) as TotalCount from NYTaxiRides
 ```
 Results for the above query look like the following:
-![athenacountquery-nytaxi.png](quiver-image-url/3907ED98036EA456D1C8D0FB51BEC837.png =244x76)
+![athenacountquery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacountquery-nytaxi.png)
 
 >**Note:**
 > This query executes much faster because the data set is partitioned and it in optimal format - Apache Parquet (an open source columnar). Following is a comparison of the execution time and amount of data scanned between the data formats:
@@ -209,7 +209,7 @@ Results for the above query look like the following:
 ```
 
 Results for the above query look like the following:
-![athenagroupbyyearquery-nytaxi.png](quiver-image-url/B92DB6AE5E09BF9519F7A3121D3D6D6B.png =323x177)
+![athenagroupbyyearquery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenagroupbyyearquery-nytaxi.png)
 
 3. Choose **New Query**, copy the following statement into the query pane, and then choose **Run Query** to get the top 12 months by total number of rides across all the years
 
@@ -221,7 +221,7 @@ Results for the above query look like the following:
 ```
 Results for the above query look like the following:
 
-![athenacountbyyearquery-nytaxi.png](quiver-image-url/F4EF7AD5FFF1DAE641C101002FDE7B12.png =394x211)
+![athenacountbyyearquery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacountbyyearquery-nytaxi.png)
 
 4. Choose **New Query**, copy the following statement into the query pane, and then choose **Run Query** to get the monthly ride counts per taxi time for the year 2016.
 
@@ -234,7 +234,7 @@ Results for the above query look like the following:
 ```
 Results for the above query look like the following:
 
-![athenagroupbymonthtypequery-nytaxi.png](quiver-image-url/910E580747423FB23F1CECDF06C97A4C.png =335x130)
+![athenagroupbymonthtypequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenagroupbymonthtypequery-nytaxi.png)
 
 >**Note:**
 Now the execution time is ~ 3 second, as the amount of data scanned by the query is restricted thus improving performance. This is because the data set is partitioned and it in optimal format – Apache Parquet, an open source columnar format.
@@ -255,7 +255,7 @@ Now the execution time is ~ 3 second, as the amount of data scanned by the query
 ```
 Results for the above query look like the following:
 
-![athenapercentilequery-nytaxi.png](quiver-image-url/8534106446A72846D0A304FCCA55DB57.png =381x185)
+![athenapercentilequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenapercentilequery-nytaxi.png)
 
 ---
 
@@ -264,7 +264,7 @@ Results for the above query look like the following:
 1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
 2. On the S3 Dashboard, Click on **Create Bucket**. 
 
-![createbucket.png](quiver-image-url/E5383D74C6CDD99AF44D1F8EC82DE510.png =289x111)
+![createbucket.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucket.png)
 
 3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
 i.Select the region as **Oregon**. 
@@ -273,7 +273,7 @@ iii. In the **Set properties** tab, leave all options as default.
 iv. In the **Set permissions** tag, leave all options as default.
 v. In the **Review** tab, click on **Create Bucket**
 
-![createbucketpopup.png](quiver-image-url/B82607106BDBE788DE7EDC8B875EFD04.png =269x308)
+![createbucketpopup.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucketpopup.png)
 ---
 ## License
 
