@@ -14,7 +14,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    i. Click on **Databases** under Data Catalog column on the left. 
 
-   ![]()
+   ![glue1](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_1.PNG)
 
    ii. Click on the **Add Database** button. 
 
@@ -22,7 +22,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
 3. Click on **Crawlers** under Data Catalog column on the left. 
 
-   ![]()
+   ![glue2](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_2.PNG)
 
    i. Click on **Add Crawler** button. 
 
@@ -54,7 +54,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    ​	c. Review configuration and click on **Finish** and on the next page, click on **Run it now** in the green box on the top. 
 
-   ![]()
+   ![glue3](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_3.PNG)
 
 4. The crawler runs and indicates that it found three tables.
 
@@ -62,11 +62,11 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
 6. If you look under **Tables**, you can see the three new tables that were created under the database nycitytaxianalysis-reinv17.
 
-   ![]()
+   ![glue4](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_4.PNG)
 
 7. The crawler used the built-in classifiers and identified the tables as CSV, inferred the columns/data types, and collected a set of properties for each table. If you look in each of those table definitions, you see the number of rows for each dataset found and that the columns don’t match between tables. As an example, clicking on the reinv17_yellow table, you can see the yellow dataset for January 2017 with 8.7 million rows, the location on S3, and the various columns found.
 
-   ![]()
+   ![glue5](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_5.PNG)
 
 ## Optimize the Queries and convert into Parquet 
 
@@ -114,13 +114,13 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    > Ensure the temporary bucket is already created/available in your S3 bucket. 
 
-   ![]()
+   ![glue6](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_6.PNG)
 
    xiv. Click on Advanced properties, and select **Enable** for Job bookmark.
 
    xv. Here's a screenshot of a finished job properties window:
 
-   ![]()
+   ![glue7](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_7.PNG)
 
 4. Click **Next**.
 
@@ -134,7 +134,7 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    iii. For Target path, **click on the folder icon** and choose the target folder previously created. **This S3 Bucket/Folder will contain the transformed Parquet data**.
 
-![]()
+![glue8](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_8.PNG)
 
 6. Under Map the source columns to target columns page,
 
@@ -147,13 +147,13 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 7. On the auto-generated script page, click on **Save** and **Run Job**.
 
 
-![]()
+![glue9](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_9.PNG)
 
 6. In the parameters pop-up, for Job bookmark, ensure its **Enable** and click on **Run Job**. 
 7. This job will run for a few minutes and you can view logs on the bottom page of the same page.
 
 
-![]()
+![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_10.PNG)
 
 8. The target folder (S3 Bucket) specified above will now have the converted parquet data. 
 
@@ -179,7 +179,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
 8. For Include path, click on the folder Icon and choose the **target** folder previously made which contains the parquet data and click on **Next**.
 
-![]()
+![glue11](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_11.PNG)
 
 9. In Add another data store, choose **No** and click on **Next**.
 
@@ -207,7 +207,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![]()
+    ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
 
     What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the parquet data.
 
@@ -221,7 +221,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![]()
+    ![glue13](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_13.PNG)
     What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the uncompressed data from the previous section.
 
 
