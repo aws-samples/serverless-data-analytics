@@ -16,26 +16,31 @@ In this section you will use the CloudFromation template to create Amazon RedShi
 
 1. Login in to your AWS console and open the [Amazon CloudFormation Dashboard](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2]) 
 2. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
-3. Download the Amazon [CloudFormation template](../Lab4/redshiftspectrumglue-lab4.template)
-3. Click **Create Stack**
-4. Select **Upload a template to Amazon S3**
-5. Click on **Choose File** to select the downloaded Amazon CloudFromation template
-6. Click **Next**
+3. Right click on the link below and download the Amazon CloudFormation template - redshiftspectrumglue-lab4.template
+
+```
+[Amazon CloudFormation template - redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template)
+```
+
+4. Click **Create Stack**
+5. Select **Upload a template to Amazon S3**
+6. Click on **Choose File** to select the downloaded Amazon CloudFromation template
+7. Click **Next**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
 
-7. Type a name *(e.g. RedshiftSpectrumLab)* for the **Stack Name**
+8. Type a name *(e.g. RedshiftSpectrumLab)* for the **Stack Name**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.39+PM.png)
 
-8. Enter the following **Parameters** for **Redshift Cluster Configuration**
+9. Enter the following **Parameters** for **Redshift Cluster Configuration**
 i. Choose 8multi-node* for **ClusterType**
 ii. Type *2* for the **NumberOfNodes**
 iii. For **NodeType** select *ds2.xlarge*
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
 
-9.  Enter the following **Parameters** for **Redshift Database Configuration**
+10.  Enter the following **Parameters** for **Redshift Database Configuration**
  i. Type a name (e.g. dbadmin) for **MasterUserName**
  ii. Type a password for **MasterUserPassword**
  iii. Type the a name (e.g. taxidb) for **DatabaseName**
@@ -43,28 +48,28 @@ iii. For **NodeType** select *ds2.xlarge*
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.39.23+PM.png)
 
-10. Enter the following **Parameters** for **Glue Crawler Configuration**
+11. Enter the following **Parameters** for **Glue Crawler Configuration**
 i. Type the name(e.g. taxi-spectrum-db) for **GlueCatalogDBName**
 ii. Type the name(e.g. csvCrawler) for **CSVCrawler**
 iii. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
-11. Click **Next**
+12. Click **Next**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.04+PM.png)
 
-12. [Optional] In the **Tags** sub-sections in **Options** type a **Key** name *(e.g. Name)* and **Value** for key.
-13. Click **Next**
+13. [Optional] In the **Tags** sub-sections in **Options** type a **Key** name *(e.g. Name)* and **Value** for key.
+14. Click **Next**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.31+PM.png)
 
-14. Check **I acknowledge that AWS CloudFormation might create IAM resources.**
-15. Click **Create**
+15. Check **I acknowledge that AWS CloudFormation might create IAM resources.**
+16. Click **Create**
 
 > **Note:** This is may take approximately 15 minutes 
 
-16. Ensure that status of the Amazon CloudFromation stack that you just create is **CREATE_COMPLETE**
-17. Select your Amazon CloudFormation stack *(RedshiftSpectrumLab)*
-18. Click on the **Outputs** tab
-19. Review the list of **Key** and thier **Value** which will look like the following. 
+17. Ensure that status of the Amazon CloudFromation stack that you just create is **CREATE_COMPLETE**
+18. Select your Amazon CloudFormation stack *(RedshiftSpectrumLab)*
+19. Click on the **Outputs** tab
+20. Review the list of **Key** and thier **Value** which will look like the following. 
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.30.42+PM.png)
 
