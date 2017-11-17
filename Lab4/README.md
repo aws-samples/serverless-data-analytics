@@ -1,4 +1,4 @@
-#Lab 4 [Take Home]: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
+#Lab 4: Analysis of data in Amazon S3 using Amazon Redshift Spectrum
 ---
 
 ##Architectural Diagram
@@ -161,6 +161,7 @@ Results for the above query look like the following:
     WHERE total_amount > 0
     GROUP BY (1)
 ````
+
 Results for the above query look like the following:
 ![Screen Shot 2017-11-14 at 9.46.55 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.46.55+PM.png)
 ---
@@ -230,6 +231,7 @@ Results for the above query look like the following:
     GROUP BY MONTH, TYPE
     ORDER BY MONTH
 ```
+
 Results for the above query look like the following:
 ![Screen Shot 2017-11-14 at 10.23.51 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.23.51+PM.png)
 ---
