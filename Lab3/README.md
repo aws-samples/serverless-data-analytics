@@ -1,14 +1,17 @@
 # Lab 3: Serverless ETL and Data Discovery using Amazon Glue
 
+* [Discover the Data](#discover-the-data)
+* [Optimize the Queries and convert into Parquet](#optimize-the-queries-and-convert-into-parquet)
+* [Query the Partitioned Data using Amazon Athena](#query-the-partitioned-data-using-amazon-athena)
+
+## Architectural Diagram
 ![architecture-overview-lab3.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/Screen+Shot+2017-11-17+at+1.11.32+AM.png)
 
-## Walkthrough
+## Discover the Data
 
 During this workshop, we will focus on one month of the New York City Taxi Records dataset, however you could easily do this for the entire eight years of data. As you crawl this unknown dataset, you discover that the data is in different formats, depending on the type of taxi. You then convert the data to a canonical form, start to analyze it, and build a set of visualizations. All without launching a single server.
 
 > For this lab, you will need to choose the **US West (Oregon)** region. 
-
-## Discover the Data
 
 1. Open the [AWS Management console for Amazon Glue](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#). 
 
