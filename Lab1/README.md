@@ -1,6 +1,6 @@
 ## Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena
 
-->![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/architecture-overview-lab1.png)<-
+![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/architecture-overview-lab1.png)
 
 ### Creating Amazon Athena Database and Table
 
@@ -176,6 +176,7 @@ Now that you have added the partition metadata to the Athena data catalog you ca
     SELECT count(1) as TotalCount from NYTaxiRides
 ```
 Results for the above query look like the following:
+
 ![athenacountquery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacountquery-nytaxi.png)
 
 >**Note:**
