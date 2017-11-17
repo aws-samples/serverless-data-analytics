@@ -16,7 +16,7 @@ In this section you will use the CloudFromation template to create Amazon RedShi
 
 1. Login in to your AWS console and open the [Amazon CloudFormation Dashboard](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2]) 
 2. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
-3. Right click on the link below and download the Amazon CloudFormation template - redshiftspectrumglue-lab4.template
+3. Right click on the link below and download the Amazon CloudFormation template file - "redshiftspectrumglue-lab4.template"
 
     [Amazon CloudFormation template - redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template)
 
