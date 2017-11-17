@@ -2,11 +2,11 @@
 
 ![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/architecture-overview-lab1.png)
 
-## Creating Amazon Athena Database and Table
+## Creating Amazon Athena Database and Table 
 
 Amazon Athena uses Apache Hive to define tables and create databases. Databases are a logical grouping of tables. When you create a database and table in Athena, you are simply describing the schema and location of the table data in Amazon S3\. In case of Hive, databases and tables don’t store the data along with the schema definition unlike traditional relational database systems. The data is read from Amazon S3 only when you query the table. The other benefit of using Hive is that the metastore found in Hive can be used in many other big data applications such as Spark, Hadoop, and Presto. With Athena catalog, you can now have Hive-compatible metastore in the cloud without the need for provisioning a Hadoop cluster or RDS instance. For guidance on databases and tables creation refer [Apache Hive documentation](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL). The following steps provides guidance specifically for Amazon Athena.
 
-## Create Database
+### Create Database
 
 1. Open the [AWS Management Console for Athena](https://console.aws.amazon.com/athena/home).
 2. If this is your first time visiting the AWS Management Console for Athena, you will get a Getting Started page. Choose **Get Started** to open the Query Editor. If this isn't your first time, the Athena **Query Editor** opens.
@@ -22,7 +22,7 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 
 ![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
 
-## Create a Table
+### Create a Table
 Now that you have a database, you are ready to create a table that is based on the New York taxi sample data. You define columns that map to the data, specify how the data is delimited, and provide the location in Amazon S3 for the file. 
 
 >**Note:** 
@@ -33,7 +33,7 @@ Now that you have a database, you are ready to create a table that is based on t
 >-	Athena does not support different storage classes within the bucket specified by the LOCATION clause, does not support the GLACIER storage class, and does not support Requester Pays buckets. For more information, see [Storage Classes](http://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html),[Changing the Storage Class of an Object in Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/ChgStoClsOfObj.html), and [Requester Pays Buckets](http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
 
 1. Ensure that current AWS region is **US West (Oregon)** region
-2. Ensure mydatabase is selected from the **DATABASE** list and then choose **New Query**.
+2. Ensure **mydatabase** is selected from the **DATABASE** list and then choose **New Query**.
 3. In the query pane, copy the following statement to create TaxiDataYellow table, and then choose **Run Query**:
 
 ````sql
@@ -117,11 +117,11 @@ Results for the above query look like the following:
 
 By partitioning your data, you can restrict the amount of data scanned by each query, thus improving performance and reducing cost. Athena leverages Hive for [partitioning](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-AlterPartition) data. You can partition your data by any key. A common practice is to partition the data based on time, often leading to a multi-level partitioning scheme. For example, a customer who has data coming in every hour might decide to partition by year, month, date, and hour. Another customer, who has data coming from many different sources but loaded one time per day, may partition by a data source identifier and date.
 
-## Create a Table with Partitions
+### Create a Table with Partitions
 
 1. Ensure that current AWS region is **US West (Oregon)** region
 
-2. Ensure mydatabase is selected from the DATABASE list and then choose **New Query**.
+2. Ensure **mydatabase** is selected from the DATABASE list and then choose **New Query**.
 
 3. In the query pane, copy the following statement to create a the NYTaxiRides table, and then choose **Run Query**:
 
@@ -152,7 +152,7 @@ By partitioning your data, you can restrict the amount of data scanned by each q
 >   SELECT * FROM NYTaxiRides limit 10
 >``` 
 
-## Adding partition metadata to Amazon Athena
+### Adding partition metadata to Amazon Athena
 
 Now that you have created the table you need to add the partition metadata to the Amazon Athena Catalog.
 
@@ -166,7 +166,7 @@ The returned result will contain information for the partitions that are added t
 >**Note:**
 > The MSCK REPAIR TABLE automatically adds partition data based on the New York taxi ride data to in the Amazon S3 bucket is because the data is already converted to Apache Parquet format partitioned by year, month and type, where type is the taxi type (yellow, green or fhv). If the data layout does not confirm with the requirements of MSCK REPAIR TABLE the alternate approach is to add each partition manually using ALTER TABLE ADD PARTITION. You can also automate adding partitions by using the JDBC driver.
 
-## Querying partitioned data set
+### Querying partitioned data set
 
 Now that you have added the partition metadata to the Athena data catalog you can now run your query.
 

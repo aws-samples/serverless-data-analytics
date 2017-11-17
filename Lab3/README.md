@@ -228,6 +228,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
 > Note: Athena charges you by the amount of data scanned per query. You can save on costs and get better performance if you partition the data, compress data, or convert it to columnar formats such as Apache Parquet.
 
+---
 ## License
 
 This library is licensed under the Apache 2.0 License. 

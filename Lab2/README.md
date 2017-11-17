@@ -1,5 +1,63 @@
 # Lab 2: Visualization using Amazon QuickSight
 
+## Creating Amazon Athena Database and Table
+
+> Note: If you have complete the [Lab 1: Serverless Analysis of data in Amazon S3 using Amazon Athena](../Lab1) you skip this section. 
+
+Amazon Athena uses Apache Hive to define tables and create databases. Databases are a logical grouping of tables. When you create a database and table in Athena, you are simply describing the schema and location of the table data in Amazon S3\. In case of Hive, databases and tables don’t store the data along with the schema definition unlike traditional relational database systems. The data is read from Amazon S3 only when you query the table. The other benefit of using Hive is that the metastore found in Hive can be used in many other big data applications such as Spark, Hadoop, and Presto. With Athena catalog, you can now have Hive-compatible metastore in the cloud without the need for provisioning a Hadoop cluster or RDS instance. For guidance on databases and tables creation refer [Apache Hive documentation](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL). The following steps provides guidance specifically for Amazon Athena.
+
+### Create Database
+
+1. Open the [AWS Management Console for Athena](https://console.aws.amazon.com/athena/home).
+2. If this is your first time visiting the AWS Management Console for Athena, you will get a Getting Started page. Choose **Get Started** to open the Query Editor. If this isn't your first time, the Athena **Query Editor** opens.
+3. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
+4. In the Athena **Query Editor**, you will see a query pane with an example query. Now you can start entering your query in the query pane.
+5. To create a database named *mydatabase*, copy the following statement, and then choose **Run Query**:
+
+````sql
+    CREATE DATABASE mydatabase
+````
+
+6.	Ensure *mydatabase* appears in the DATABASE list on the **Catalog** dashboard
+
+![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
+
+### Create a Table
+
+1. Ensure that current AWS region is **US West (Oregon)** region
+
+2. Ensure **mydatabase** is selected from the DATABASE list and then choose **New Query**.
+
+3. In the query pane, copy the following statement to create a the NYTaxiRides table, and then choose **Run Query**:
+
+````sql
+  CREATE EXTERNAL TABLE NYTaxiRides (
+    vendorid STRING,
+    pickup_datetime TIMESTAMP,
+    dropoff_datetime TIMESTAMP,
+    ratecode INT,
+    passenger_count INT,
+    trip_distance DOUBLE,
+    fare_amount DOUBLE,
+    total_amount DOUBLE,
+    payment_type INT
+    )
+  PARTITIONED BY (YEAR INT, MONTH INT, TYPE string)
+  STORED AS PARQUET
+  LOCATION 's3://us-west-2.serverless-analytics/canonical/NY-Pub'
+````
+
+4.Ensure the table you just created appears on the Catalog dashboard for the selected database.
+
+Now that you have created the table you need to add the partition metadata to the Amazon Athena Catalog.
+
+1. Choose **New Query**, copy the following statement into the query pane, and then choose **Run Query** to add partition metadata.
+
+```sql
+    MSCK REPAIR TABLE NYTaxiRides
+```
+The returned result will contain information for the partitions that are added to NYTaxiRides for each taxi type (yellow, green, fhv) for every month for the year from 2009 to 2016
+
 ## Signing up for Amazon Quicksight Standard Edition
 
 1. Open the [AWS ManagementConsole for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
