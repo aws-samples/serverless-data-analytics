@@ -179,6 +179,8 @@ Now that you have configured the data source and created a new filed to represen
 
 ### Add year based filter to visualize the dataset for the year 2016
 
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage14.PNG)
+
 1. Ensure that current AWS region is **US West (Oregon)** region.
 
 2. Under the **Fields List**, select the **year** field to show the distribution of fares per year.
@@ -191,7 +193,7 @@ Now that you have configured the data source and created a new filed to represen
 
    iii. Select **1235**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight13.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage15.PNG)
 
 4. To add a filter on the **year** filed, 
 
@@ -199,7 +201,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field** from the dropdown menu.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture4.png)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage16.PNG)
 
 5. To filter the data only for the year 2016,
 
@@ -207,13 +209,13 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Filter list** and **Include** for the two dropdowns under the filter name.
 
-   iii. Deselect **ALL**.
+   iii. Deselect **Select All**.
 
    iv. Select only **2016**.
-
-   v. Select **Close**.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight14.PNG)
+   
+   v. Click **Apply**.
+      
+   vi. Click **Close**.
 
 ### Add the month based filter for the month of January
 
