@@ -77,16 +77,19 @@ The returned result will contain information for the partitions that are added t
 ## Signing up for Amazon Quicksight Standard Edition
 
 1. Open the [AWS ManagementConsole for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight1.PNG)
+
 2. If this is the first time you are accessing QuickSight, you will see a sign-uplanding page for QuickSight. 
 3. Click on **Sign up for QuickSight**.
 
 > **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight1.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight2.PNG)
 
 4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight2.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight3.PNG)
 
 5. On the next page,
 
@@ -98,71 +101,65 @@ The returned result will contain information for the partitions that are added t
 
    iv. Ensure that **Enable autodiscovery of your data and users in your Amazon Redshift, Amazon RDS and AWS IAM Services** and **Amazon Athena** boxes are checked. 
 
-   v. **Click finish**. 
+   v. **Click Finish**. 
 
    vi. You will be presented with a with message **Congratulations**! **You are signed up for Amazon QuickSight! **on successful sign up. Click on **Go to Amazon QuickSight**. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight3.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight4.PNG)
 
 6. On the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight4.PNG)
-
-7. In this section, click on **Account Settings**.
-
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight5.PNG)
 
-8. Under Account Settings, in **Account Permissions ** Click **Edit AWS Permissions**.
+7. In this section, click on **Account Settings**.
+8. Under Account Settings, in **Account Permissions** Click **Edit AWS Permissions**.
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture1.png)
+
 9. Check the box for **Amazon S3** and you will see a pop-up to select Amazon S3 buckets.
 10. Ensure **Select All **is checked.
 11. Click on **Select buckets**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture1.png)
-
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight6.PNG)
 
 12. Check the box for **Amazon S3 Storage Analytics **[Optional].
 13. Click **Apply**.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight6.PNG)
 
 ## Configuring Amazon QuickSight to use Amazon Athena as data source
 
 > For this lab, you will need to choose the **US West (Oregon)** region. 
 
-1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
-
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight7.PNG)
 
+1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
+
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture2.png)
 
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture2.png)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture3.png)
 
 4. Select **Athena** as a Data source.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture3.png)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 6. Click **Create data source**.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
 
 
 7. Select the **mydatabase** database.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight9.PNG)
 
-8. Choose the **nytaxirides **table.
+8. Choose the **nytaxirides** table.
 9. Choose **Edit/Preview** data.
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight10.PNG)
-
 10. Under **Fields** on the left column, choose **New field**
 
-    i. Select the **extract **operation from Function list.
+    i. Select the **extract** operation from Function list.
 
     ii. Select **pickup_datetime** from the **Field list**.
 
@@ -206,7 +203,7 @@ Now that you have configured the data source and created a new filed to represen
 
 5. To filter the data only for the year 2016,
 
-   i. Choose the new filter that you just created by clicking on **#** next to filter name **year **under the **Edit filter** menu.
+   i. Choose the new filter that you just created by clicking on **#** next to filter name **year** under the **Edit filter** menu.
 
    ii. Select **Filter list** and **Include** for the two dropdowns under the filter name.
 
@@ -229,7 +226,7 @@ Now that you have configured the data source and created a new filed to represen
 
 5. To filter the data set for the month of January (Month 1)
 
-   i. Select the dropdown arrow for **month **field under the **Fields List**.
+   i. Select the dropdown arrow for **month** field under the **Fields List**.
 
    ii. Select **Add filter to the field**.
 
@@ -237,7 +234,7 @@ Now that you have configured the data source and created a new filed to represen
 
 6. To filter the data for month of January 2016 (Month 1),
 
-   i. Choose the new filter that you just created by clicking on **# **next to filter name **month **under the **Edit Filter** menu.
+   i. Choose the new filter that you just created by clicking on **#** next to filter name **month** under the **Edit Filter** menu.
 
    ii. Select **Filter list** and **Include** for the two dropdowns under the filter name.
 
@@ -272,7 +269,7 @@ Now that you have configured the data source and created a new filed to represen
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture5.png)
 
 5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
-6. Select **Aggregate:Year **from the revealed sub-menu.
+6. Select **Aggregate:Year** from the revealed sub-menu.
 7. Select **Day** to aggregate by day.
 
 
