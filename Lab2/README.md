@@ -114,13 +114,13 @@ The returned result will contain information for the partitions that are added t
 7. In this section, click on **Account Settings**.
 8. Under Account Settings, in **Account Permissions** Click **Edit AWS Permissions**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture1.png)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight6.PNG)
 
 9. Check the box for **Amazon S3** and you will see a pop-up to select Amazon S3 buckets.
 10. Ensure **Select All **is checked.
 11. Click on **Select buckets**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight6.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight7.PNG)
 
 12. Check the box for **Amazon S3 Storage Analytics **[Optional].
 13. Click **Apply**.
@@ -129,7 +129,7 @@ The returned result will contain information for the partitions that are added t
 
 > For this lab, you will need to choose the **US West (Oregon)** region. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight7.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
 
 1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
 
@@ -138,7 +138,7 @@ The returned result will contain information for the partitions that are added t
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture3.png)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight9.PNG)
 
 4. Select **Athena** as a Data source.
 
