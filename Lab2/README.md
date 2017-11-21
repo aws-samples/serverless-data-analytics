@@ -179,6 +179,7 @@ Now that you have configured the data source and created a new filed to represen
 
 ### Add year based filter to visualize the dataset for the year 2016
 
+
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage14.PNG)
 
 1. Ensure that current AWS region is **US West (Oregon)** region.
@@ -203,7 +204,8 @@ Now that you have configured the data source and created a new filed to represen
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage16.PNG)
 
-5. To filter the data only for the year 2016,
+5. To filter the data only for the year 2016
+
    i. Choose the new filter that you just created by clicking on **#** next to filter name **year** under the **Edit filter** menu.
   
    ii. Select **Filter list** for the two dropdowns under the filter name.
@@ -243,8 +245,6 @@ Now that you have configured the data source and created a new filed to represen
    v. Click **Apply**
  
    vi. Click **Close**.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight17.PNG)
 
 ### Visualize the data by hour of day for the month of January 2016
 
