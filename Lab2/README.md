@@ -205,10 +205,15 @@ Now that you have configured the data source and created a new filed to represen
 
 5. To filter the data only for the year 2016,
    i. Choose the new filter that you just created by clicking on **#** next to filter name **year** under the **Edit filter** menu.
+  
    ii. Select **Filter list** for the two dropdowns under the filter name.
+  
    iii. Deselect **Select All**.
+  
    iv. Select only **2016**.
+  
    v. Click **Apply**.
+  
    vi. Click **Close**.
 
 ### Add the month based filter for the month of January
@@ -226,11 +231,17 @@ Now that you have configured the data source and created a new filed to represen
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage18.PNG)
 
 6. To filter the data for month of January 2016 (Month 1),
+
    i. Choose the new filter that you just created by clicking on **#** next to filter name **month** under the **Edit Filter** menu.
+ 
    ii. Select **Filter list** for the two dropdowns under the filter name.
+ 
    iii. Deselect **ALL**.
+ 
    iv. Select only **1**.
+ 
    v. Click **Apply**
+ 
    vi. Click **Close**.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight17.PNG)
