@@ -122,14 +122,14 @@ The returned result will contain information for the partitions that are added t
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight7.PNG)
 
-12. Check the box for **Amazon S3 Storage Analytics **[Optional].
+12. Check the box for **Amazon S3 Storage Analytics**[Optional].
 13. Click **Apply**.
 
 ## Configuring Amazon QuickSight to use Amazon Athena as data source
 
 > For this lab, you will need to choose the **US West (Oregon)** region. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight8.PNG)
 
 1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
 
