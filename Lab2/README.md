@@ -155,6 +155,8 @@ The returned result will contain information for the partitions that are added t
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
 
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage13.PNG)
+
 10. Under **Fields** on the left column, choose **New field**
 
     i. Select the **extract** operation from Function list.
@@ -167,7 +169,7 @@ The returned result will contain information for the partitions that are added t
 
     v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime filed** based on the specified formula.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight12.PNG)
+
 
 11. Choose **Save and Visualize** on top of the page.
 
