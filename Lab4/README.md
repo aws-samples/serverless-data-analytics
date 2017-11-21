@@ -238,6 +238,17 @@ Results for the above query look like the following:
 
 ![Screen Shot 2017-11-14 at 10.23.51 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.23.51+PM.png)
 
+## Deleting the Amazon CloudFormation Stack
+
+Now that you have successfully queried the dataset using Amazon Redshift Spectrum, you need to tear down the stack that you deployed using the Amazon CloudFormation template.
+
+1. Open the [Amazon CloudFormation Dashboard](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2) 
+2. Enable the check box next to the name of the stack *(e.g. RedshiftSpectrumLab)* that you deployed at the beginingo fo the Lab. 
+3. Click on **Actions** drop down button.
+4. Select **Delete Stack**'
+5. Click **Yes, Delete** on the *Delete Stack* pop dialog
+6. Ensure that Amazon CloudFromation stack name *(e.g. RedshiftSpectrumLab)* is no longer showing in the list of stacks.
+
 ---
 ## License
 
