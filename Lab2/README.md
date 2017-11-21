@@ -138,11 +138,11 @@ The returned result will contain information for the partitions that are added t
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight9.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight10.PNG)
 
 4. Select **Athena** as a Data source.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight11.PNG)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 6. Click **Create data source**.
@@ -150,7 +150,7 @@ The returned result will contain information for the partitions that are added t
 
 7. Select the **mydatabase** database.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight9.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight12.PNG)
 
 8. Choose the **nytaxirides** table.
 9. Choose **Edit/Preview** data.
