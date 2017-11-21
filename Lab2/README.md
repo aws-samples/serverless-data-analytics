@@ -109,7 +109,7 @@ The returned result will contain information for the partitions that are added t
 
 6. On the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight5.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight5.png)
 
 7. In this section, click on **Account Settings**.
 8. Under Account Settings, in **Account Permissions** Click **Edit AWS Permissions**.
