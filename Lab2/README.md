@@ -78,18 +78,18 @@ The returned result will contain information for the partitions that are added t
 
 1. Open the [AWS ManagementConsole for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight1.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight1.PNG)
 
 2. If this is the first time you are accessing QuickSight, you will see a sign-uplanding page for QuickSight. 
 3. Click on **Sign up for QuickSight**.
 
 > **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight2.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight2.PNG)
 
 4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight3.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight3.PNG)
 
 5. On the next page,
 
@@ -105,7 +105,7 @@ The returned result will contain information for the partitions that are added t
 
    vi. You will be presented with a with message **Congratulations**! **You are signed up for Amazon QuickSight! **on successful sign up. Click on **Go to Amazon QuickSight**. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight4.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight4.PNG)
 
 6. On the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
@@ -114,13 +114,13 @@ The returned result will contain information for the partitions that are added t
 7. In this section, click on **Account Settings**.
 8. Under Account Settings, in **Account Permissions** Click **Edit AWS Permissions**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight6.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight6.PNG)
 
 9. Check the box for **Amazon S3** and you will see a pop-up to select Amazon S3 buckets.
 10. Ensure **Select All **is checked.
 11. Click on **Select buckets**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight7.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight7.PNG)
 
 12. Check the box for **Amazon S3 Storage Analytics**[Optional].
 13. Click **Apply**.
@@ -129,7 +129,7 @@ The returned result will contain information for the partitions that are added t
 
 > For this lab, you will need to choose the **US West (Oregon)** region. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight8.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight8.PNG)
 
 1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
 
@@ -138,11 +138,11 @@ The returned result will contain information for the partitions that are added t
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight10.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight10.PNG)
 
 4. Select **Athena** as a Data source.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight11.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight11.PNG)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 6. Click **Create data source**.
@@ -150,7 +150,7 @@ The returned result will contain information for the partitions that are added t
 
 7. Select the **mydatabase** database.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/lab2_quicksight12.PNG)
+![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight12.PNG)
 
 8. Choose the **nytaxirides** table.
 9. Choose **Edit/Preview** data.
