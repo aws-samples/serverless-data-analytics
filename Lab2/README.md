@@ -226,8 +226,11 @@ Now that you have configured the data source and created a new filed to represen
 2. Select **Visualize** from the navigation menu in the left-hand corner.
 3. Under the **Fields list**, deselect **year** by clicking on **year** field name.
 4. Select **month** by clicking on the **month** field name from the **Fields list**.
+
 5. To filter the data set for the month of January (Month 1)
+
    i. Select the dropdown arrow for **month** field under the **Fields List**.
+
    ii. Select **Add filter to the field**.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage18.PNG)
@@ -252,12 +255,8 @@ Now that you have configured the data source and created a new filed to represen
 2. Under the **Fields list**, deselect **month** by clicking on **month** field name.
 3. Select **hourofday** by clicking on the **hourofday** field name from the **Fields list**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight18.PNG)
-
 4. Change the visual type to a line chart by selecting the line chart icon highlighted in the screenshot below under **Visual types**.
 5. Using the slider on x-axis, select the entire range [0,23] for **hourofday** field.
-
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/quicksight19.PNG)
 
 ### Visualize the data for the month of January 2016 for all taxi types(yellow, green, fhv)
 
@@ -266,20 +265,16 @@ Now that you have configured the data source and created a new filed to represen
 3. Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime **field name from **Fields list**.
 4. Select **type** for Color by clicking on the **type** field name from **Fields list.**
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture5.png)
-
 5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
 6. Select **Aggregate:Year** from the revealed sub-menu.
 7. Select **Day** to aggregate by day.
 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture6.png)
 
 
 8. Using the slider on x-axis, select the entire month of January 2016 for **pickup_datetime** field.
 
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture7.png)
 
 > Note: The interesting outlier in the above graph is that on Jan23rd, 2016, you see the dip in the number of taxis across all types. Doing a quick google search for that date, gets us this weather article from NBC New York
 > ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Picture8.png)
