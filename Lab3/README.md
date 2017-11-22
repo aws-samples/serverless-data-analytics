@@ -169,7 +169,7 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
 10. You can view logs on the bottom page of the same page.
 
-   ![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
+  ![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
 
 11. The target folder (S3 Bucket) specified above (step 6 iii) will now have the converted parquet data. 
 
