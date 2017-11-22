@@ -3,8 +3,8 @@
 * [Discover the Data](#discover-the-data)
 * [Optimize the Queries and convert into Parquet](#optimize-the-queries-and-convert-into-parquet)
 * [Query the Partitioned Data using Amazon Athena](#query-the-partitioned-data-using-amazon-athena)
-* [Summary](#Summary)
-* [Deleting the Glue database, crawlers and ETL Jobs created for this Lab](#Deleting the Glue database, crawlers and ETL Jobs created for this Lab)
+* [Summary](#summary)
+* [Deleting the Glue database, crawlers and ETL Jobs created for this Lab](#deleting-the-glue-database-crawlers-and-etl-jobs-created-for-this-lab)
 
 ## Architectural Diagram
 ![architecture-overview-lab3.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/Screen+Shot+2017-11-17+at+1.11.32+AM.png)
@@ -61,7 +61,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    ​	c. Review configuration and click on **Finish** and on the next page, click on **Run it now** in the green box on the top. 
 
-   ![glue3](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_3.PNG)
+   ![glue14](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_14.PNG)
 
    ​	d. The crawler runs and indicates that it found three tables.
 
@@ -123,13 +123,13 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    > Ensure the temporary bucket is already created/available in your S3 bucket. 
 
-   ![glue6](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_6.PNG)
+   ![glue15](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_15.PNG)
 
    xiv. Click on Advanced properties, and select **Enable** for Job bookmark.
 
    xv. Here's a screenshot of a finished job properties window:
 
-   ![glue7](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_7.PNG)
+   ![glue16](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_16.PNG)
 
 4. Click **Next**.
 
@@ -145,7 +145,7 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    iii. For Target path, **click on the folder icon** and choose the target folder previously created. **This S3 Bucket/Folder will contain the transformed Parquet data**.
 
-![glue8](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_8.PNG)
+![glue17](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_17.PNG)
 
 7. Under Map the source columns to target columns page,
 
@@ -165,11 +165,11 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
 9. This job will run for roughly around 30 minutes.
 
-   ![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_11.PNG)
+   ![glue11](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_11.PNG)
 
 10. You can view logs on the bottom page of the same page.
 
-  ![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
+  ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
 
 11. The target folder (S3 Bucket) specified above (step 6 iii) will now have the converted parquet data. 
 
@@ -195,7 +195,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
 8. For Include path, click on the folder Icon and choose the **target** folder previously made which contains the parquet data and click on **Next**.
 
-![glue11](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_13.PNG)
+![glue18](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_18.PNG)
 
 9. In Add another data store, choose **No** and click on **Next**.
 
@@ -223,7 +223,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_comp_scanresult.PNG)
+    ![glue19](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_comp_scanresult.PNG)
 
     What we see is the Run time and Data scanned numbers for Amazon Athena to **query and scan the parquet data**.
 
@@ -237,7 +237,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_uncomp_scanresult.PNG)
+    ![glue20](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_uncomp_scanresult.PNG)
 
 20. What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the uncompressed data from the previous section.
 
