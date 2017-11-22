@@ -3,6 +3,8 @@
 * [Discover the Data](#discover-the-data)
 * [Optimize the Queries and convert into Parquet](#optimize-the-queries-and-convert-into-parquet)
 * [Query the Partitioned Data using Amazon Athena](#query-the-partitioned-data-using-amazon-athena)
+* [Summary](#Summary)
+* [Deleting the Glue database, crawlers and ETL Jobs created for this Lab](#Deleting the Glue database, crawlers and ETL Jobs created for this Lab)
 
 ## Architectural Diagram
 ![architecture-overview-lab3.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/Screen+Shot+2017-11-17+at+1.11.32+AM.png)
@@ -61,15 +63,15 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    ![glue3](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_3.PNG)
 
-4. The crawler runs and indicates that it found three tables.
+   ​	d. The crawler runs and indicates that it found three tables.
 
-5. Click on **Tables**, under Data Catalog on the left column. 
+4. Click on **Tables**, under Data Catalog on the left column. 
 
-6. If you look under **Tables**, you can see the three new tables that were created under the database nycitytaxianalysis-reinv17.
+5. If you look under **Tables**, you can see the three new tables that were created under the database nycitytaxianalysis-reinv17.
 
    ![glue4](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_4.PNG)
 
-7. The crawler used the built-in classifiers and identified the tables as CSV, inferred the columns/data types, and collected a set of properties for each table. If you look in each of those table definitions, you see the number of rows for each dataset found and that the columns don’t match between tables. As an example, clicking on the reinv17_yellow table, you can see the yellow dataset for January 2017 with 8.7 million rows, the location on S3, and the various columns found.
+6. The crawler used the built-in classifiers and identified the tables as CSV, inferred the columns/data types, and collected a set of properties for each table. If you look in each of those table definitions, you see the number of rows for each dataset found and that the columns don’t match between tables. As an example, clicking on the reinv17_yellow table, you can see the yellow dataset for January 2017 with 8.7 million rows, the location on S3, and the various columns found.
 
    ![glue5](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_5.PNG)
 
@@ -113,7 +115,9 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    xi. For Script file name, enter **nycitytaxianalysis-reinv17-yellow**.
 
-   xii. For S3 path where script is stored, click on the Folder icon and choose an S3 bucket specific for this workshop. if you have not created one, navigate to your S3 page [here](https://s3.console.aws.amazon.com/s3/home) and follow [these](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) instructions to create a new S3 bucket. In the newly created bucket, create 2 sub-folders **tmp** and **target** which will be used for this workshop. 
+   > For this workshop, we are only working on the yellow dataset. Feel free to run through these steps to also convert the green and FHV dataset. 
+
+   xii. For S3 path where script is stored, click on the Folder icon and choose an S3 bucket specific for this workshop. if you have not created one, navigate to your S3 page [here](https://s3.console.aws.amazon.com/s3/home) and follow [these](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) instructions to create a new S3 bucket. In the newly created bucket, create 2 sub-folders **tmp** and **target** which will be used for this workshop. Choose the newly created S3 bucket via the Folder icon. 
 
    xiii. For Temporary directory, choose the tmp folder previously created and click **Next**. 
 
@@ -131,6 +135,8 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
 5. Under Choose your data sources, select **reinv17_yellow** table as the data source and click on **Next**.
 
+   > For this workshop, we are only working on the yellow dataset. Feel free to run through these steps to also convert the green and FHV dataset. 
+
 6. Under Choose your data targets, select the radio button for **Create tables in your data target**.
 
    i. For Data store, Choose **Amazon S3**.
@@ -141,7 +147,7 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
 ![glue8](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_8.PNG)
 
-6. Under Map the source columns to target columns page,
+7. Under Map the source columns to target columns page,
 
    i. Under Target, change the Column name **tpep_pickup_datetime** to **pickup_date**. Click on its respective **data type** field string and change the Column type to **TIMESTAMP** and click on **Update**.
 
@@ -149,18 +155,23 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    iii. Choose **Next**, verify the information and click **Finish**.
 
-7. On the auto-generated script page, click on **Save** and **Run Job**.
-
-
 ![glue9](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_9.PNG)
 
-6. In the parameters pop-up, for Job bookmark, ensure its **Enable** and click on **Run Job**. 
-7. This job will run for a few minutes and you can view logs on the bottom page of the same page.
-
+8. On the auto-generated script page, click on **Save** and **Run Job**.
 
 ![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_10.PNG)
 
-8. The target folder (S3 Bucket) specified above will now have the converted parquet data. 
+8. In the parameters pop-up, for Job bookmark, ensure its **Enable** and click on **Run Job**. 
+
+9. This job will run for roughly around 30 minutes.
+
+   ![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_11.PNG)
+
+10. You can view logs on the bottom page of the same page.
+
+   ![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
+
+11. The target folder (S3 Bucket) specified above (step 6 iii) will now have the converted parquet data. 
 
 ## Query the Partitioned Data using Amazon Athena
 
@@ -184,7 +195,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
 8. For Include path, click on the folder Icon and choose the **target** folder previously made which contains the parquet data and click on **Next**.
 
-![glue11](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_11.PNG)
+![glue11](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_13.PNG)
 
 9. In Add another data store, choose **No** and click on **Next**.
 
@@ -207,16 +218,16 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 17. In the query editor on the right, type
 
     ```
-    select count(*) from parq_target;;
+    select count(*) from parq_target;
     ```
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
+    ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_comp_scanresult.PNG)
 
-    What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the parquet data.
+    What we see is the Run time and Data scanned numbers for Amazon Athena to **query and scan the parquet data**.
 
-18. Under Database, you should see the database **nycitytaxianalysis-reinv17** which was created from a previous section. Select this database and you should see under Tables **reinv17_yellow**. 
+18. Under Database, you should see the earlier made database **nycitytaxianalysis-reinv17** which was created in a previous section. Select this database and you should see under Tables **reinv17_yellow**. 
 
 19. In the query editor on the right, type
 
@@ -226,12 +237,32 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![glue13](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_13.PNG)
-    
-    What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the uncompressed data from the previous section.
+    ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_uncomp_scanresult.PNG)
+
+20. What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the uncompressed data from the previous section.
 
 
 > Note: Athena charges you by the amount of data scanned per query. You can save on costs and get better performance if you partition the data, compress data, or convert it to columnar formats such as Apache Parquet.
+
+## Summary
+
+In the lab, you went from data discovery to analyzing a canonical dataset, without starting and setting up a single server. You started by crawling a dataset you didn’t know anything about and the crawler told you the structure, columns, and counts of records.
+
+From there, you saw the datasets were in different formats, but represented the same thing: NY City Taxi rides. You then converted them into a canonical (or normalized) form that is easily queried through Athena and possible in QuickSight, in addition to a wide number of different tools not covered in this post.
+
+## Deleting the Glue database, crawlers and ETL Jobs created for this Lab
+
+Now that you have successfully discovered and analyzed the dataset using Amazon Glue and Amazon Athena, you need to delete the resources created as part of this lab. 
+
+1. Open the [AWS Management console for Amazon Glue](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#). Ensure you are in the Oregon region (as part of this lab).
+2. Click on **Databases** under Data Catalog column on the left. 
+3. Check the box for the Database that were created as part of this lab. Click on **Action** and select **Delete Database**. And click on **Delete**. This will also delete the tables under this database. 
+4. Click on **Crawlers** under Data Catalog column on the left. 
+5. Check the box for the crawler that were created as part of this lab. Click on **Action** and select **Delete Crawler**. And click on **Delete**. 
+6. Click on **Jobs** under ETL column on the left. 
+7. Check the box for the jobs that were created as part of this lab. Click on **Action** and select **Delete**. And click on **Delete**. 
+8. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home).
+9. Click on the S3 bucket that was created as part of this lab. You need to click on its corresponding **Bucket icon** to select the bucket instead of opening the bucket. Click on **Delete bucket** button on the top, to delete the S3 bucket. In the pop-up window, Type the name of the bucket (that was created as part of this lab), and click **Confirm**. 
 
 ---
 ## License
