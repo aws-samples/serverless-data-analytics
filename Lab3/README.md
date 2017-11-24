@@ -1,5 +1,7 @@
 # Lab 3: Serverless ETL and Data Discovery using Amazon Glue
 
+* [Create an IAM Role](#create-an-iam-role)
+* [Create an Amazon S3 bucket](#create-an-amazon-s3-bucket)
 * [Discover the Data](#discover-the-data)
 * [Optimize the Queries and convert into Parquet](#optimize-the-queries-and-convert-into-parquet)
 * [Query the Partitioned Data using Amazon Athena](#query-the-partitioned-data-using-amazon-athena)
@@ -8,6 +10,54 @@
 
 ## Architectural Diagram
 ![architecture-overview-lab3.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/Screen+Shot+2017-11-17+at+1.11.32+AM.png)
+
+## Create an IAM Role
+
+Create an IAM role that has permission to your Amazon S3 sources, targets, temporary directory, scripts, **AWSGlueServiceRole** and any libraries used by the job. You can click [here](https://console.aws.amazon.com/iam/home?region=us-west-2#/roles) to create a new role. For additional documentation to create a role [here](docs.aws.amazon.com/cli/latest/reference/iam/create-role.html).
+
+1. On the IAM Page, click on **Create Role**.
+2. Choose the service as **Glue** and click on **Next: Permissions** on the bottom.
+3. On the Attach permissions policies, search policies for S3 and check the box for **AmazonS3FullAccess**. 
+
+> Do not click on the policy, you just have to check the corresponding checkbox. 
+
+4. On the same page, now search policies for Glue and check the box for **AWSGlueServiceRole** and **AWSGlueConsoleFullAccess**.
+
+> Do not click on the policy, you just have to check the corresponding checkbox. 
+
+5. Click on **Next: Review**.
+6. Enter Role name as 
+
+```
+nycitytaxianalysis-reinv
+```
+
+​	and click Finish.
+
+## Create an Amazon S3 bucket
+
+1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
+2. On the S3 Dashboard, Click on **Create Bucket**. 
+
+![createbucket.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucket.png)
+
+1. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). It will be easier to name your bucket
+
+   ```
+   aws-glue-scripts-<YOURAWSACCOUNTID>-us-west-2
+   ```
+
+   and it would be easier to choose/select this bucket for the remainder of this Lab3. 
+
+   i.Select the region as **Oregon**. 
+   ii. Click **Next** to navigate to next tab. 
+   iii. In the **Set properties** tab, leave all options as default. 
+   iv. In the **Set permissions** tag, leave all options as default.
+   v. In the **Review** tab, click on **Create Bucket**
+
+![createbucketpopup.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucketpopup.png)
+
+2. Now, in this newly created bucket, create two sub-buckets **tmp** and **target** using the same instructions as the above step. We will use these buckets as part of Lab3 later on. 
 
 ## Discover the Data
 
@@ -48,7 +98,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
    vi. For Choose an IAM Role, select **Create an IAM role** and enter the role name as following and click on **Next**.
 
    ```
-   nycitytaxianalysis-reinv17
+   nycitytaxianalysis-reinv17-crawler
    ```
 
    vii. For Create a schedule for this crawler, choose Frequency as **Run on Demand** and click on **Next**.
@@ -85,31 +135,7 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
 3. Under Job properties, input name as **nycitytaxianalysis-reinv17-yellow**. Since we will be working with only the yellow dataset for this workshop.
 
-   i. Under  IAM Role, Click on **create an IAM role** to create a role that has permission to your Amazon S3 sources, targets, temporary directory, scripts, **AWSGlueServiceRole** and any libraries used by the job. You can click on the link on the page to create a role [here](https://console.aws.amazon.com/iam/home?region=us-west-2#/roles). You can find additional documentation to create a role [here](docs.aws.amazon.com/cli/latest/reference/iam/create-role.html). ##########
-
-   ii. On the IAM Page, click on **Create Role**.
-
-   iii. Choose the service as **Glue** and click on **Next: Permissions** on the bottom. 
-
-   iv. On the Attach permissions policies, search policies for S3 and check the box for **AmazonS3FullAccess**. 
-
-   > Do not click on the policy, you just have to check the corresponding checkbox. 
-
-   v. On the same page, now search policies for Glue and check the box for **AWSGlueServiceRole** and **AWSGlueConsoleFullAccess**.
-
-   > Do not click on the policy, you just have to check the corresponding checkbox. 
-
-   vi. Click on **Next: Review**.
-
-   vii. Enter Role name as 
-
-   ```
-   nycitytaxianalysis-reinv17
-   ```
-
-   viii. and click Finish and **close** this browser window/tab. 
-
-   ix. Back in the Glue Job Properties tab/window, Choose the newly created IAM role. 
+   i. Under  IAM Role, Choose the IAM role created at the beginning of this lab. 
 
    x. Under This job runs, choose the radio button for **A proposed script generated by AWS Glue**.
 
@@ -117,9 +143,9 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    > For this workshop, we are only working on the yellow dataset. Feel free to run through these steps to also convert the green and FHV dataset. 
 
-   xii. For S3 path where script is stored, click on the Folder icon and choose an S3 bucket specific for this workshop. if you have not created one, navigate to your S3 page [here](https://s3.console.aws.amazon.com/s3/home) and follow [these](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) instructions to create a new S3 bucket. In the newly created bucket, create 2 sub-folders **tmp** and **target** which will be used for this workshop. Choose the newly created S3 bucket via the Folder icon. 
+   xii. For S3 path where script is stored, click on the Folder icon and choose the S3 bucket created at the beginning of this workshop. **Choose the newly created S3 bucket via the Folder icon**. 
 
-   xiii. For Temporary directory, choose the tmp folder previously created and click **Next**. 
+   xiii. For Temporary directory, choose the tmp folder created at the beginning of this workshop. **Choose the S3 bucket via the Folder icon** and click **Next**. 
 
    > Ensure the temporary bucket is already created/available in your S3 bucket. 
 
