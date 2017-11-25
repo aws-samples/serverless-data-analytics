@@ -8,7 +8,6 @@
     * [Create Athena Table with Partitions](#create-a-table-with-partitions)
     * [Adding partition metadata to Amazon Athena](#adding-partition-metadata-to-amazon-athena)
     * [Querying partitioned data set](#querying-partitioned-data-set)
-*[Create an Amazon S3 bucket](#create-an-amazon-s3-bucket)
     
 ## Architectural Diagram
 ![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
@@ -268,22 +267,6 @@ Now the execution time is ~ 3 second, as the amount of data scanned by the query
 Results for the above query look like the following:
 
 ![athenapercentilequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenapercentilequery-nytaxi.png)
-
-## Create an Amazon S3 bucket
-
-1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
-2. On the S3 Dashboard, Click on **Create Bucket**. 
-
-![createbucket.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucket.png)
-
-3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
-i.Select the region as **Oregon**. 
-ii. Click **Next** to navigate to next tab. 
-iii. In the **Set properties** tab, leave all options as default. 
-iv. In the **Set permissions** tag, leave all options as default.
-v. In the **Review** tab, click on **Create Bucket**
-
-![createbucketpopup.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucketpopup.png)
 ---
 
 ## License
