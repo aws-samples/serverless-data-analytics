@@ -35,24 +35,27 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.39+PM.png)
 
 9. Enter the following **Parameters** for **Redshift Cluster Configuration**
-    i. Choose 8multi-node* for **ClusterType**
-    ii. Type *2* for the **NumberOfNodes**
-    iii. For **NodeType** select *dc1.xlarge*
+    
+    1. Choose 8multi-node* for **ClusterType**
+    2. Type *2* for the **NumberOfNodes**
+    3. For **NodeType** select *dc1.xlarge*
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
 
 10.  Enter the following **Parameters** for **Redshift Database Configuration**
-     i. Type a name (e.g. dbadmin) for **MasterUserName**
-     ii. Type a password for **MasterUserPassword**
-     iii. Type the a name (e.g. taxidb) for **DatabaseName**
-     iv. Type the IP address of your local machine for **ClientIP**
+    
+    1. Type a name (e.g. dbadmin) for **MasterUserName**
+    2. Type a password for **MasterUserPassword**
+    3. Type the a name (e.g. taxidb) for **DatabaseName**
+    4. Type the IP address of your local machine for **ClientIP**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.39.23+PM.png)
 
 11. Enter the following **Parameters** for **Glue Crawler Configuration**
-    i. Type the name(e.g. taxi-spectrum-db) for **GlueCatalogDBName**    
-    ii. Type the name(e.g. csvCrawler) for **CSVCrawler**
-    iii. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
+
+    1. Type the name(e.g. taxi-spectrum-db) for **GlueCatalogDBName**    
+    2. Type the name(e.g. csvCrawler) for **CSVCrawler**
+    3. Type the name(e.g. parquetCrawler) for **ParquetCrawler**
 12. Click **Next**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.04+PM.png)
