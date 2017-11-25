@@ -26,11 +26,11 @@
 ![createbucket.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucket.png)
 
 3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
-i. Select the region as **Oregon**. 
-ii. Click **Next** to navigate to next tab. 
-iii. In the **Set properties** tab, leave all options as default. 
-iv. In the **Set permissions** tag, leave all options as default.
-v. In the **Review** tab, click on **Create Bucket**
+..1. Select the region as **Oregon**. 
+..2. Click **Next** to navigate to next tab. 
+..3. In the **Set properties** tab, leave all options as default. 
+..4. In the **Set permissions** tag, leave all options as default.
+..5. In the **Review** tab, click on **Create Bucket**
 
 ![createbucketpopup.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucketpopup.png)
 
