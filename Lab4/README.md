@@ -107,7 +107,14 @@ Now that you have run the crawlers lest ensure that new tables *taxi* and *ny_pu
 
 11. Click on **taxi** to review the table definition and schema 
 12. Navigate back and click on **ny_pub** to review the table definition and schema
+
+>**Note:**
+>The good news is that you don’t have to create a new table or definition to read the CSV document we just looked at. With AWS Glue crawlers, you have already inferred the schema and created tables namely taxi and ny_pub.
+
 13. Click on **View partitions** to review the partition metadata
+
+>**Note:**
+> The major advantage of Glue Crawlers is that they understand the partitions based on the S3 object prefix and automatically create the table with partitions as part of the crawling. 
 
 ## Create Redshift Spectrum Scehma and reference external table form AWS Glue Data Catalog Database
 
