@@ -25,10 +25,8 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
 6. Click **Next**
 
 >**Note:** 
->Click on the link below to view the Amazon CloudFormation template file - "redshiftspectrumglue-lab4.template"
->```   
->    [Amazon CloudFormation template - redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template)
->```
+>Click on the link [redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template) to view the Amazon CloudFormation template file
+
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
 
