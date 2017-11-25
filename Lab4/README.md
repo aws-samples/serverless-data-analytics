@@ -43,11 +43,10 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
 
 10.  Enter the following **Parameters** for **Redshift Database Configuration**.
-    
-    1. Type a name (e.g. dbadmin) for **MasterUserName**.
-    2. Type a password for **MasterUserPassword**.
-    3. Type the a name (e.g. taxidb) for **DatabaseName**.
-    4. Type the IP address of your local machine for **ClientIP**.
+    i. Type a name (e.g. dbadmin) for **MasterUserName**.
+    ii. Type a password for **MasterUserPassword**.
+    iii. Type the a name (e.g. taxidb) for **DatabaseName**.
+    iv. Type the IP address of your local machine for **ClientIP**.
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.39.23+PM.png)
 
