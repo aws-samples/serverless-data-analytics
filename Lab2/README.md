@@ -269,8 +269,7 @@ Now that you have configured the data source and created a new filed to represen
 4. Select **type** for Color by clicking on the **type** field name from **Fields list.**
 
 5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
-6. Select **Aggregate:Year** from the revealed sub-menu.
-7. Select **Day** to aggregate by day.
+6. Select **Aggregate:Day** to aggregate by day.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage21.PNG)
 8. Using the slider on x-axis, select the entire month of January 2016 for **pickup_datetime** field.
