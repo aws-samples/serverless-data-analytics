@@ -21,8 +21,11 @@ In this section you will use the CloudFromation template to create Amazon RedShi
     [Amazon CloudFormation template - redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template)
 
 4. Click **Create Stack**
-5. Select **Upload a template to Amazon S3**
-6. Click on **Choose File** to select the downloaded Amazon CloudFromation template
+5. Select **Specify an Amazon S3 template URL**
+6. Copy paste the following S3 template URL in the text box
+```
+https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labcontent/redshiftspectrumglue-lab4.template
+```
 7. Click **Next**
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
@@ -34,7 +37,7 @@ In this section you will use the CloudFromation template to create Amazon RedShi
 9. Enter the following **Parameters** for **Redshift Cluster Configuration**
 i. Choose 8multi-node* for **ClusterType**
 ii. Type *2* for the **NumberOfNodes**
-iii. For **NodeType** select *ds2.xlarge*
+iii. For **NodeType** select *dc1.xlarge*
 
 ![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
 
