@@ -14,7 +14,7 @@
     
 
 ## Architectural Diagram
-![architecture-overview-lab2.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/Screen+Shot+2017-11-17+at+1.11.02+AM.png)
+![architecture-overview-lab2.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/architecture-overview-lab2.png)
 
 ## Creating Amazon Athena Database and Table
 
@@ -279,7 +279,7 @@ Now that you have configured the data source and created a new filed to represen
 > Note: The interesting outlier in the above graph is that on Jan23rd, 2016, you see the dip in the number of taxis across all types. Doing a quick google search for that date, gets us this weather article from NBC New York
 > ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage22.PNG)
 
-*Using Amazon QuickSight, you were able to see patterns across a time-series data by building visualizations, performing ad-hoc analysis, and quickly generating insights.*
+*Using Amazon Qu.ickSight, you were able to see patterns across a time-series data by building visualizations, performing ad-hoc analysis, and quickly generating insights.*
 
 ---
 ## License
