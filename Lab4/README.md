@@ -36,7 +36,7 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
 
 9. Enter the following **Parameters** for **Redshift Cluster Configuration**
     
-    1. Choose 8multi-node* for **ClusterType**
+    1. Choose *multi-node* for **ClusterType**
     2. Type *2* for the **NumberOfNodes**
     3. For **NodeType** select *dc1.xlarge*
 

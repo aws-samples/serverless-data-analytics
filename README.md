@@ -37,6 +37,12 @@ The AWS region name is always listed in the upper-right corner of the AWS Manage
 |EU (Frankfurt) Region|eu-central-1|
 
 ---
+## Labs
+
+### Pre-requisites
+
+[Create a new AWS Account](https://aws.amazon.com/free/) if you don't have one. 
+ 
 
 |Lab|Name|
 |---|----|
