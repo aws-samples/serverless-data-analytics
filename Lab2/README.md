@@ -181,14 +181,19 @@ The returned result will contain information for the partitions that are added t
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 6. Click **Create data source**.
-7. Select the **mydatabase** database.
+7. Click **Use custom SQL**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage12.PNG)
+![image](New_Data_Set_1.jpg)
+1.  Enter the name of the dataset and the SQL string `SELECT * FROM "mydatabase"."nytaxirides"`
 
-8. Choose the **nytaxirides** table.
-9. Choose **Edit/Preview** data.
+![image](New_Data_Set_2.jpg)
+
+8. Choose **Edit/Preview data**.
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
+
+![image](Data_Prep_1.jpg)
+1. Click **Finish** then expand the **Fields** section
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage13.PNG)
 
