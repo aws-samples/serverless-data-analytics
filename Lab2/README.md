@@ -12,25 +12,25 @@
     * [Visualize the data by hour of day for the month of January 2016](#visualize-the-data-by-hour-of-day-for-the-month-of-january-2016)
     * [Visualize the data for the month of January 2016 for all taxi types(yellow, green, fhv)](#visualize-the-data-for-the-month-of-january-2016-for-all-taxi-typesyellow-green-fhv)
 
-    
+
 
 ## Architectural Diagram
 ![architecture-overview-lab2.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/architecture-overview-lab2.png)
 
 
 ## Create an Amazon S3 bucket
-> Note: If you have already have an S3 bucket in your AWS Account you can skip this section. 
+> Note: If you have already have an S3 bucket in your AWS Account you can skip this section.
 
 1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
-2. On the S3 Dashboard, Click on **Create Bucket**. 
+2. On the S3 Dashboard, Click on **Create Bucket**.
 
 ![createbucket.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucket.png)
 
-3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
+3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces).
 
-    1. Select the region as **Oregon**. 
-    2. Click **Next** to navigate to next tab. 
-    3. In the **Set properties** tab, leave all options as default. 
+    1. Select the region as **Oregon**.
+    2. Click **Next** to navigate to next tab.
+    3. In the **Set properties** tab, leave all options as default.
     4. In the **Set permissions** tag, leave all options as default.
     5. In the **Review** tab, click on **Create Bucket**
 
@@ -44,10 +44,10 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 
 ![createbucket.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucket.png)
 
-3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
-i.Select the region as **Oregon**. 
-ii. Click **Next** to navigate to next tab. 
-iii. In the **Set properties** tab, leave all options as default. 
+3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces).
+i.Select the region as **Oregon**.
+ii. Click **Next** to navigate to next tab.
+iii. In the **Set properties** tab, leave all options as default.
 iv. In the **Set permissions** tag, leave all options as default.
 v. In the **Review** tab, click on **Create Bucket**
 
@@ -111,14 +111,14 @@ The returned result will contain information for the partitions that are added t
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage1.PNG)
 
-2. If this is the first time you are accessing QuickSight, you will see a sign-uplanding page for QuickSight. 
+2. If this is the first time you are accessing QuickSight, you will see a sign-uplanding page for QuickSight.
 3. Click on **Sign up for QuickSight**.
 
 > **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage2.PNG)
 
-4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
+4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage3.PNG)
 
@@ -128,13 +128,13 @@ The returned result will contain information for the partitions that are added t
 
    ii. Enter avalid email for **Notification email address**.
 
-   iii. Just for this step, leave the **QuickSight capacity region **as **N.Virginia**. 
+   iii. Just for this step, leave the **QuickSight capacity region **as **N.Virginia**.
 
-   iv. Ensure that **Enable autodiscovery of your data and users in your Amazon Redshift, Amazon RDS and AWS IAM Services** and **Amazon Athena** boxes are checked. 
+   iv. Ensure that **Enable autodiscovery of your data and users in your Amazon Redshift, Amazon RDS and AWS IAM Services** and **Amazon Athena** boxes are checked.
 
-   v. **Click Finish**. 
+   v. **Click Finish**.
 
-   vi. You will be presented with a with message **Congratulations**! **You are signed up for Amazon QuickSight! **on successful sign up. Click on **Go to Amazon QuickSight**. 
+   vi. You will be presented with a with message **Congratulations**! **You are signed up for Amazon QuickSight! **on successful sign up. Click on **Go to Amazon QuickSight**.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage4.PNG)
 
@@ -145,29 +145,33 @@ The returned result will contain information for the partitions that are added t
 7. In this section, click on **Account Settings**.
 8. Under Account Settings, in **Account Permissions** Click **Edit AWS Permissions**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage6.PNG)
+![image](Edit_Resource_Permissions.jpg)
 
 9. Check the box for **Amazon S3** and you will see a pop-up to select Amazon S3 buckets.
 10. Ensure **Select All **is checked.
-11. Click on **Select buckets**.
+
+![image](Edit_Resource_Permissions_external_bucket.jpg)
+1. Select the **S3 Buckets you can access across AWS** tab.
+11. Select **Use a different bucket** and fill in `us-west-2.serverless-analytics` then click **Add S3 Bucket**
+12. Click on **Select buckets**.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage7.PNG)
 
-12. Check the box for **Amazon S3 Storage Analytics**[Optional].
-13. Click **Apply**.
+13. Check the box for **Amazon S3 Storage Analytics**[Optional].
+14. Click **Apply**.
 
 ## Configuring Amazon QuickSight to use Amazon Athena as data source
 
-> For this lab, you will need to choose the **US West (Oregon)** region. 
+> For this lab, you will need to choose the **US West (Oregon)** region.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage8.PNG)
 
-1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
+1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage9.PNG)
 
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
-3. Click on **New data set** on the top-left corner of the webpage and review the options. 
+3. Click on **New data set** on the top-left corner of the webpage and review the options.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage10.PNG)
 
@@ -177,18 +181,23 @@ The returned result will contain information for the partitions that are added t
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 6. Click **Create data source**.
-7. Select the **mydatabase** database.
+7. Click **Use custom SQL**.
 
-![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage12.PNG)
+![image](New_Data_Set_1.jpg)
+8.  Enter the name of the dataset and the SQL string `SELECT * FROM "mydatabase"."nytaxirides"`
 
-8. Choose the **nytaxirides** table.
-9. Choose **Edit/Preview** data.
+![image](New_Data_Set_2.jpg)
+
+9. Choose **Edit/Preview data**.
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
 
+![image](Data_Prep_1.jpg)
+10. Click **Finish** then expand the **Fields** section
+
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage13.PNG)
 
-10. Under **Fields** on the left column, choose **New field**
+11. Under **Fields** on the left column, choose **New field**
 
     i. Select the **extract** operation from Function list.
 
@@ -202,7 +211,7 @@ The returned result will contain information for the partitions that are added t
 
 
 
-11. Choose **Save and Visualize** on top of the page.
+12. Choose **Save and Visualize** on top of the page.
 
 ## Visualizing the data using Amazon QuickSight
 
@@ -227,7 +236,7 @@ Now that you have configured the data source and created a new filed to represen
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage15.PNG)
 
-4. To add a filter on the **year** filed, 
+4. To add a filter on the **year** filed,
 
    i. Select the dropdown for **year** field from the **Fields list**.
 
@@ -238,15 +247,15 @@ Now that you have configured the data source and created a new filed to represen
 5. To filter the data only for the year 2016
 
    i. Choose the new filter that you just created by clicking on **#** next to filter name **year** under the **Edit filter** menu.
-  
+
    ii. Select **Filter list** for the two dropdowns under the filter name.
-  
+
    iii. Deselect **Select All**.
-  
+
    iv. Select only **2016**.
-  
+
    v. Click **Apply**.
-  
+
    vi. Click **Close**.
 
 ### Add the month based filter for the month of January
@@ -269,15 +278,15 @@ Now that you have configured the data source and created a new filed to represen
 6. To filter the data for month of January 2016 (Month 1),
 
    i. Choose the new filter that you just created by clicking on **#** next to filter name **month** under the **Edit Filter** menu.
- 
+
    ii. Select **Filter list** for the two dropdowns under the filter name.
- 
+
    iii. Deselect **ALL**.
- 
+
    iv. Select only **1**.
- 
+
    v. Click **Apply**
- 
+
    vi. Click **Close**.
 
 ### Visualize the data by hour of day for the month of January 2016
@@ -314,47 +323,4 @@ Now that you have configured the data source and created a new filed to represen
 ---
 ## License
 
-This library is licensed under the Apache 2.0 License. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This library is licensed under the Apache 2.0 License.
