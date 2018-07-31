@@ -152,13 +152,13 @@ The returned result will contain information for the partitions that are added t
 
 ![image](Edit_Resource_Permissions_external_bucket.jpg)
 1. Select the **S3 Buckets you can access across AWS** tab.
-1. Select **Use a different bucket** and fill in `us-west-2.serverless-analytics` then click **Add S3 Bucket**
-11. Click on **Select buckets**.
+11. Select **Use a different bucket** and fill in `us-west-2.serverless-analytics` then click **Add S3 Bucket**
+12. Click on **Select buckets**.
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage7.PNG)
 
-12. Check the box for **Amazon S3 Storage Analytics**[Optional].
-13. Click **Apply**.
+13. Check the box for **Amazon S3 Storage Analytics**[Optional].
+14. Click **Apply**.
 
 ## Configuring Amazon QuickSight to use Amazon Athena as data source
 
@@ -184,20 +184,20 @@ The returned result will contain information for the partitions that are added t
 7. Click **Use custom SQL**.
 
 ![image](New_Data_Set_1.jpg)
-1.  Enter the name of the dataset and the SQL string `SELECT * FROM "mydatabase"."nytaxirides"`
+8.  Enter the name of the dataset and the SQL string `SELECT * FROM "mydatabase"."nytaxirides"`
 
 ![image](New_Data_Set_2.jpg)
 
-8. Choose **Edit/Preview data**.
+9. Choose **Edit/Preview data**.
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
 
 ![image](Data_Prep_1.jpg)
-1. Click **Finish** then expand the **Fields** section
+10. Click **Finish** then expand the **Fields** section
 
 ![image](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab2/qsimage13.PNG)
 
-10. Under **Fields** on the left column, choose **New field**
+11. Under **Fields** on the left column, choose **New field**
 
     i. Select the **extract** operation from Function list.
 
@@ -211,7 +211,7 @@ The returned result will contain information for the partitions that are added t
 
 
 
-11. Choose **Save and Visualize** on top of the page.
+12. Choose **Save and Visualize** on top of the page.
 
 ## Visualizing the data using Amazon QuickSight
 
