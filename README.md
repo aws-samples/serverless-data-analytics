@@ -6,7 +6,7 @@
 
 In this lab, you are going to build a serverless architecture to analyze the data directly from Amazon S3 using [Amazon Athena](https://aws.amazon.com/athena/) and visualize the data in [Amazon QuickSight](https://quicksight.aws/). The data set that you are going to use is a public data set that includes trip records from all trips completed in Yellow and Green taxis in NYC from 2009 to 2016, and all trips in for-hire vehicles (FHV) from 2015 to 2016\. Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data set is already partitioned and converted from CSV to Apache Parquet. In the first part of the lab you will be building SQL like queries using Amazon Athena to query both the data formats directly form Amazon S3 and comparing the query performance. In the second part, using Amazon Athena table, create in first part, as the data source for Amazon QuickSight you will generate visualization and meaningful insights from the data set in Amazon S3. An optional lab is included to incorporate serverless ETL using AWS Glue to optimize query performance. We also give you access to a take-home lab for you to reapply the same design and directly query the same dataset in Amazon S3 from an Amazon Redshift data warehouse using Redshift Spectrum\.
 
-![architecture-overview.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/architectureoveriew.PNG)
+![architecture-overview.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/architectureoveriew.PNG)
 
 ---
 
