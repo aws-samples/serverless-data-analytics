@@ -8,7 +8,7 @@
 
 
 ## Architectural Diagram
-![architecture-overview-lab4.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-17+at+1.11.45+AM.png)
+![architecture-overview-lab4.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-17+at+1.11.45+AM.png)
 
 ## Deploying Amazon Redshift Cluster 
 
@@ -20,7 +20,7 @@ In this section you will use the CloudFromation template to create Amazon RedShi
 4. Select **Specify an Amazon S3 template URL**
 5. Copy paste the following S3 template URL in the text box
 ```
-https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labcontent/redshiftspectrumglue-lab4.template
+https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/us-west-2.serverless-data-analytics/labcontent/redshiftspectrumglue-lab4.template
 ```
 6. Click **Next**
 
@@ -28,11 +28,11 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
 >Click on the link [redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template) to view the Amazon CloudFormation template file
 
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
 
 8. Type a name *(e.g. RedshiftSpectrumLab)* for the **Stack Name**
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.39+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.39+PM.png)
 
 9. Enter the following **Parameters** for **Redshift Cluster Configuration**
     
@@ -40,7 +40,7 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
     2. Type *2* for the **NumberOfNodes**
     3. For **NodeType** select *dc1.xlarge*
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
 
 10.  Enter the following **Parameters** for **Redshift Database Configuration**.
     i. Type a name (e.g. dbadmin) for **MasterUserName**.
@@ -48,7 +48,7 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
     iii. Type the a name (e.g. taxidb) for **DatabaseName**.
     iv. Type the IP address of your local machine for **ClientIP**.
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.39.23+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.39.23+PM.png)
 
 11. Enter the following **Parameters** for **Glue Crawler Configuration**
     1. Type the name(e.g. taxi-spectrum-db) for **GlueCatalogDBName**.    
@@ -57,12 +57,12 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
     
 12. Click **Next**
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.04+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.04+PM.png)
 
 13. [Optional] In the **Tags** sub-sections in **Options** type a **Key** name *(e.g. Name)* and **Value** for key.
 14. Click **Next**
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.31+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.40.31+PM.png)
 
 15. Check **I acknowledge that AWS CloudFormation might create IAM resources.**
 16. Click **Create**
@@ -74,13 +74,13 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
 19. Click on the **Outputs** tab
 20. Review the list of **Key** and thier **Value** which will look like the following. 
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.30.42+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.30.42+PM.png)
 
 ## Running AWS Glue Crawlers - CSV & Parquet Crawler 
 1. Open [AWS Management Console for Glue](https://us-west-2.console.aws.amazon.com/glue/home?region=us-west-2#)
 2. Go to AWS Glues Crawlers page by clicking on **Crawlers** in the navigation pane
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/Screen+Shot+2017-11-17+at+3.02.35+AM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/Screen+Shot+2017-11-17+at+3.02.35+AM.png)
 
 3. Select the AWS Glue Crawler for CSV(e.g. csvCrawler)
 4. Click **Run crawler**
@@ -89,7 +89,7 @@ https://s3-us-west-2.amazonaws.com/us-west-2.serverless-data-analytics/labconten
 
 > Note: This may take approximately 5 min for both the crawlers to parse the data in CSV and Parquet format. 
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.08.23+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.08.23+PM.png)
 
 7. Wait for the **Status** of both the crawlers to *Ready* state
 
@@ -98,11 +98,11 @@ Now that you have run the crawlers lest ensure that new tables *taxi* and *ny_pu
 8. To to the list of databases in the AWS Glue Data Catalog click on **Databases** in the navigation pane.
 9. Click on **taxi-spectrum-db**
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.09.32+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.09.32+PM.png)
 
 10. Click on **Tables in taxi-spectrum-db**
 
-![IMAGE](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.09.50+PM.png)
+![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.09.50+PM.png)
 
 11. Click on **taxi** to review the table definition and schema 
 12. Navigate back and click on **ny_pub** to review the table definition and schema
@@ -150,7 +150,7 @@ Now that you have created the schema, you can run queries on the data set and se
 
 Results for the above query look like the following:
 
-![Screen Shot 2017-11-14 at 9.16.45 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.16.45+PM.png)
+![Screen Shot 2017-11-14 at 9.16.45 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.16.45+PM.png)
 
 2.	Copy the following statement into the query pane, and then choose **Run Query** to get the total number of taxi rides for yellow cabs. 
 
@@ -159,7 +159,7 @@ Results for the above query look like the following:
 ```
 Results for the above query look like the following:
 
-![Screen Shot 2017-11-14 at 9.25.23 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.25.23+PM.png)
+![Screen Shot 2017-11-14 at 9.25.23 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.25.23+PM.png)
 
 3. Copy the following statement into the query pane, and then choose **Run Query** to query for the number of rides per vendor, along with the average fair amount for yellow taxi rides
 
@@ -178,7 +178,7 @@ Results for the above query look like the following:
 
 Results for the above query look like the following:
 
-![Screen Shot 2017-11-14 at 9.46.55 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.46.55+PM.png)
+![Screen Shot 2017-11-14 at 9.46.55 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+9.46.55+PM.png)
 
 ## Querying partitioned data using Amazon Redshift Spectrum
 
@@ -194,7 +194,7 @@ Now that you have added the partition metadata to the Athena data catalog you ca
 ```
 Results for the above query look like the following:
 
-![Screen Shot 2017-11-14 at 10.08.50 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.08.50+PM.png)
+![Screen Shot 2017-11-14 at 10.08.50 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.08.50+PM.png)
 
 >**Note:**
 > This query executes much faster because the data set is partitioned and it in optimal format - Apache Parquet (an open source columnar).
@@ -205,7 +205,7 @@ Results for the above query look like the following:
     SELECT YEAR, count(1) as TotalCount from taxispectrum.ny_pub GROUP BY YEAR
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.11.47 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.11.47+PM.png)
+![Screen Shot 2017-11-14 at 10.11.47 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.11.47+PM.png)
 
 3. Copy the following statement into the query pane, and then choose **Run Query** to get the top 12 months by total number of rides across all the years
 
@@ -216,7 +216,7 @@ Results for the above query look like the following:
     ORDER BY (3) DESC LIMIT 12
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.13.54 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.13.54+PM.png)
+![Screen Shot 2017-11-14 at 10.13.54 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.13.54+PM.png)
 
 4. Copy the following statement into the query pane, and then choose **Run Query** to get the monthly ride counts per taxi time for the year 2016.
 
@@ -228,7 +228,7 @@ Results for the above query look like the following:
     ORDER BY (1), (2)
 ```
 Results for the above query look like the following:
-![Screen Shot 2017-11-14 at 10.18.08 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.18.08+PM.png)
+![Screen Shot 2017-11-14 at 10.18.08 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.18.08+PM.png)
 
 5. Copy the following statement anywhere into the query pane, and then choose **Run Query**.
 
@@ -248,7 +248,7 @@ Results for the above query look like the following:
 
 Results for the above query look like the following:
 
-![Screen Shot 2017-11-14 at 10.23.51 PM.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.23.51+PM.png)
+![Screen Shot 2017-11-14 at 10.23.51 PM.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-14+at+10.23.51+PM.png)
 
 ## Deleting the Amazon CloudFormation Stack
 
