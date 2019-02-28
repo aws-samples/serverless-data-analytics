@@ -9,7 +9,7 @@
 * [Summary](#summary)
 
 ## Architectural Diagram
-![architecture-overview-lab3.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/Screen+Shot+2017-11-17+at+1.11.32+AM.png)
+![architecture-overview-lab3.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/Screen+Shot+2017-11-17+at+1.11.32+AM.png)
 
 ## Create an IAM Role
 
@@ -39,7 +39,7 @@ nycitytaxianalysis-reinv
 1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
 2. On the S3 Dashboard, Click on **Create Bucket**. 
 
-![createbucket.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucket.png)
+![createbucket.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucket.png)
 
 1. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). It will be easier to name your bucket
 
@@ -55,7 +55,7 @@ nycitytaxianalysis-reinv
    iv. In the **Set permissions** tag, leave all options as default.
    v. In the **Review** tab, click on **Create Bucket**
 
-![createbucketpopup.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/createbucketpopup.png)
+![createbucketpopup.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucketpopup.png)
 
 2. Now, in this newly created bucket, create two sub-buckets **tmp** and **target** using the same instructions as the above step. We will use these buckets as part of Lab3 later on. 
 
@@ -71,7 +71,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    i. Click on **Databases** under Data Catalog column on the left. 
 
-   ![glue1](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_1.PNG)
+   ![glue1](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_1.PNG)
 
    ii. Click on the **Add Database** button. 
 
@@ -79,7 +79,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
 3. Click on **Crawlers** under Data Catalog column on the left. 
 
-   ![glue2](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_2.PNG)
+   ![glue2](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_2.PNG)
 
    i. Click on **Add Crawler** button. 
 
@@ -111,7 +111,7 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
    ​	c. Review configuration and click on **Finish** and on the next page, click on **Run it now** in the green box on the top. 
 
-   ![glue14](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_14.PNG)
+   ![glue14](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_14.PNG)
 
    ​	d. The crawler runs and indicates that it found three tables.
 
@@ -119,11 +119,11 @@ During this workshop, we will focus on one month of the New York City Taxi Recor
 
 5. If you look under **Tables**, you can see the three new tables that were created under the database nycitytaxianalysis-reinv17.
 
-   ![glue4](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_4.PNG)
+   ![glue4](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_4.PNG)
 
 6. The crawler used the built-in classifiers and identified the tables as CSV, inferred the columns/data types, and collected a set of properties for each table. If you look in each of those table definitions, you see the number of rows for each dataset found and that the columns don’t match between tables. As an example, clicking on the reinv17_yellow table, you can see the yellow dataset for January 2017 with 8.7 million rows, the location on S3, and the various columns found.
 
-   ![glue5](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_5.PNG)
+   ![glue5](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_5.PNG)
 
 ## Optimize the Queries and convert into Parquet 
 
@@ -149,13 +149,13 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    > Ensure the temporary bucket is already created/available in your S3 bucket. 
 
-   ![glue15](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_15.PNG)
+   ![glue15](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_15.PNG)
 
    xiv. Click on Advanced properties, and select **Enable** for Job bookmark.
 
    xv. Here's a screenshot of a finished job properties window:
 
-   ![glue16](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_16.PNG)
+   ![glue16](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_16.PNG)
 
 4. Click **Next**.
 
@@ -171,7 +171,7 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    iii. For Target path, **click on the folder icon** and choose the target folder previously created. **This S3 Bucket/Folder will contain the transformed Parquet data**.
 
-![glue17](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_17.PNG)
+![glue17](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_17.PNG)
 
 7. Under Map the source columns to target columns page,
 
@@ -181,21 +181,21 @@ Create an ETL job to move this data into a query-optimized form. You convert the
 
    iii. Choose **Next**, verify the information and click **Finish**.
 
-![glue9](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_9.PNG)
+![glue9](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_9.PNG)
 
 8. On the auto-generated script page, click on **Save** and **Run Job**.
 
-![glue10](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_10.PNG)
+![glue10](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_10.PNG)
 
 8. In the parameters pop-up, for Job bookmark, ensure its **Enable** and click on **Run Job**. 
 
 9. This job will run for roughly around 30 minutes.
 
-   ![glue11](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_11.PNG)
+   ![glue11](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_11.PNG)
 
 10. You can view logs on the bottom page of the same page.
 
-  ![glue12](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_12.PNG)
+  ![glue12](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_12.PNG)
 
 11. The target folder (S3 Bucket) specified above (step 6 iii) will now have the converted parquet data. 
 
@@ -221,7 +221,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
 8. For Include path, click on the folder Icon and choose the **target** folder previously made which contains the parquet data and click on **Next**.
 
-![glue18](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_18.PNG)
+![glue18](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_18.PNG)
 
 9. In Add another data store, choose **No** and click on **Next**.
 
@@ -249,7 +249,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![glue19](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_comp_scanresult.PNG)
+    ![glue19](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_comp_scanresult.PNG)
 
     What we see is the Run time and Data scanned numbers for Amazon Athena to **query and scan the parquet data**.
 
@@ -263,7 +263,7 @@ In regions where AWS Glue is supported, Athena uses the AWS Glue Data Catalog as
 
     and take note the Run Time and Data scanned numbers here. 
 
-    ![glue20](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab3/glue_uncomp_scanresult.PNG)
+    ![glue20](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab3/glue_uncomp_scanresult.PNG)
 
 20. What we see is the Run time and Data scanned numbers for Amazon Athena to query and scan the uncompressed data from the previous section.
 

@@ -10,7 +10,7 @@
     * [Querying partitioned data set](#querying-partitioned-data-set)
     
 ## Architectural Diagram
-![architecture-overview-lab1.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
+![architecture-overview-lab1.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
 
 ## Creating Amazon Athena Database and Table 
 
@@ -30,7 +30,7 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 
 6.	Ensure *mydatabase* appears in the DATABASE list on the **Catalog** dashboard
 
-![athenacatalog.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacatalog.png)
+![athenacatalog.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenacatalog.png)
 
 ### Create a Table
 Now that you have a database, you are ready to create a table that is based on the New York taxi sample data. You define columns that map to the data, specify how the data is delimited, and provide the location in Amazon S3 for the file. 
@@ -78,7 +78,7 @@ Now that you have a database, you are ready to create a table that is based on t
 >-	You can also query data in regions other than the region where you are running Amazon Athena. Standard inter-region data transfer rates for Amazon S3 apply in addition to standard Amazon Athena charges. 
 >-	Ensure the table you just created appears on the Catalog dashboard for the selected database.
 
-![athenatablecreatequery-yellowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenatablecreatequery-yellowtaxi.png)
+![athenatablecreatequery-yellowtaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenatablecreatequery-yellowtaxi.png)
 
 ## Querying data from Amazon S3 using Amazon Athena
 
@@ -91,7 +91,7 @@ Now that you have created the table, you can run queries on the data set and see
 ````
 
 Results for the above query look like the following:
-![athenaselectquery-yellowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenaselectquery-yellowtaxi.png)
+![athenaselectquery-yellowtaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenaselectquery-yellowtaxi.png)
 
 2.	Choose **New Query**, copy the following statement into the query pane, and then choose **Run Query** to get the total number of taxi rides for yellow cabs. 
 
@@ -99,7 +99,7 @@ Results for the above query look like the following:
     SELECT COUNT(1) as TotalCount FROM TaxiDataYellow
 ````
 Results for the above query look like the following:
-![athenacountquery-yelllowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacountquery-yelllowtaxi.png)
+![athenacountquery-yelllowtaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenacountquery-yelllowtaxi.png)
 
 >**Note:** 
 The current data format is CSV and this query is scanning **~207GB** of data and takes **~20.06** seconds to execute the query.
@@ -121,7 +121,7 @@ The current data format is CSV and this query is scanning **~207GB** of data and
     GROUP BY (1)
 ````
 Results for the above query look like the following:
-![athenacasequery-yelllowtaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacasequery-yelllowtaxi.png)
+![athenacasequery-yelllowtaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenacasequery-yelllowtaxi.png)
 
 ## Querying partitioned data using Amazon Athena
 
@@ -154,7 +154,7 @@ By partitioning your data, you can restrict the amount of data scanned by each q
 
 4.Ensure the table you just created appears on the Catalog dashboard for the selected database.
 
-![athenatablecreatequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenatablecreatequery-nytaxi.png)
+![athenatablecreatequery-nytaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenatablecreatequery-nytaxi.png)
 
 >**Note:**
 >	Running the following sample query on the NYTaxiRides table you just created will not return any result as no metadata about the partition is added to the Amazon Athena table catalog.  
@@ -187,7 +187,7 @@ Now that you have added the partition metadata to the Athena data catalog you ca
 ```
 Results for the above query look like the following:
 
-![athenacountquery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacountquery-nytaxi.png)
+![athenacountquery-nytaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenacountquery-nytaxi.png)
 
 >**Note:**
 > This query executes much faster because the data set is partitioned and it in optimal format - Apache Parquet (an open source columnar). Following is a comparison of the execution time and amount of data scanned between the data formats:
@@ -220,7 +220,7 @@ Results for the above query look like the following:
 ```
 
 Results for the above query look like the following:
-![athenagroupbyyearquery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenagroupbyyearquery-nytaxi.png)
+![athenagroupbyyearquery-nytaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenagroupbyyearquery-nytaxi.png)
 
 3. Choose **New Query**, copy the following statement into the query pane, and then choose **Run Query** to get the top 12 months by total number of rides across all the years
 
@@ -232,7 +232,7 @@ Results for the above query look like the following:
 ```
 Results for the above query look like the following:
 
-![athenacountbyyearquery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenacountbyyearquery-nytaxi.png)
+![athenacountbyyearquery-nytaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenacountbyyearquery-nytaxi.png)
 
 4. Choose **New Query**, copy the following statement into the query pane, and then choose **Run Query** to get the monthly ride counts per taxi time for the year 2016.
 
@@ -245,7 +245,7 @@ Results for the above query look like the following:
 ```
 Results for the above query look like the following:
 
-![athenagroupbymonthtypequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenagroupbymonthtypequery-nytaxi.png)
+![athenagroupbymonthtypequery-nytaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenagroupbymonthtypequery-nytaxi.png)
 
 >**Note:**
 Now the execution time is ~ 3 second, as the amount of data scanned by the query is restricted thus improving performance. This is because the data set is partitioned and it in optimal format – Apache Parquet, an open source columnar format.
@@ -266,7 +266,7 @@ Now the execution time is ~ 3 second, as the amount of data scanned by the query
 ```
 Results for the above query look like the following:
 
-![athenapercentilequery-nytaxi.png](https://s3-us-west-2.amazonaws.com/reinvent2017content-abd313/lab1/athenapercentilequery-nytaxi.png)
+![athenapercentilequery-nytaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenapercentilequery-nytaxi.png)
 ---
 
 ## License
