@@ -11,8 +11,8 @@
 * [Creating Views with Amazon Athena](#creating-views-with-amazon-athena)
 * [CTAS Query with Amazon Athena](#ctas-query-with-amazon-athena)
     * [Create an Amazon S3 Bucket](#create-an-amazon-s3-bucket)
-    * [Repartitioning the dataset using CTAS Query](#repartitioning-the-dataset-using-ctas-uery)
-    * [Repartitioning and Bucketing the dataset using CTAS Query](#repartitioning-and-ucketing-the-dataset-using-ctas-query )
+    * [Repartitioning the dataset using CTAS Query](#repartitioning-the-dataset-using-ctas-query)
+    * [Repartitioning and Bucketing the dataset using CTAS Query](#repartitioning-and-bucketing-the-dataset-using-ctas-query)
         
 ## Architectural Diagram
 ![architecture-overview-lab1.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
