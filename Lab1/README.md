@@ -383,9 +383,10 @@ Go the Amazon S3 bucket specified as the external location and inspect the forma
 
 >**Note:**
 > Please delete the Amazon S3 location specified as the external location before retrying the query. Donot delete the Amazon S3 bucket.
----
 
 Please refer to [Partitioning Vs. Bucketing](https://docs.aws.amazon.com/athena/latest/ug/bucketing-vs-partitioning.html) for more details.
+
+---
 
 ## License
 
