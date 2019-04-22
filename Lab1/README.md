@@ -9,7 +9,11 @@
     * [Adding partition metadata to Amazon Athena](#adding-partition-metadata-to-amazon-athena)
     * [Querying partitioned data set](#querying-partitioned-data-set)
 * [Creating Views with Amazon Athena](#creating-views-with-amazon-athena)
-    
+* [CTAS Query with Amazon Athena](#ctas-query-with-amazon-athena)
+    * [Create an Amazon S3 Bucket](#create-an-amazon-s3-bucket)
+    * [Repartitioning the dataset using CTAS Query](#repartitioning-the-dataset-using-ctas-uery)
+    * [Repartitioning and Bucketing the dataset using CTAS Query](#repartitioning-and-ucketing-the-dataset-using-ctas-query )
+        
 ## Architectural Diagram
 ![architecture-overview-lab1.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
 
@@ -303,7 +307,82 @@ SELECT * FROM nytaxiridesmonthly WHERE vendorid = '1'
 
 Some of the view specific commands to try out are [SHOW COLUMNS](https://docs.aws.amazon.com/athena/latest/ug/show-columns.html), [SHOW CREATE VIEW](https://docs.aws.amazon.com/athena/latest/ug/show-create-view.html), [DESCRIBE VIEW](https://docs.aws.amazon.com/athena/latest/ug/describe-view.html), and [DROP VIEW](https://docs.aws.amazon.com/athena/latest/ug/drop-view.html).
 
+## CTAS Query with Amazon Athena
+
+A CREATE TABLE AS SELECT (CTAS) query creates a new table in Athena from the results of a SELECT statement from another query. Athena stores data files created by the CTAS statement in a specified location in Amazon S3. For syntax, see [CREATE TABLE AS](https://docs.aws.amazon.com/athena/latest/ug/create-table-as.html).
+
+Use CTAS queries to:
+
+Create tables from query results in one step, without repeatedly querying raw data sets. This makes it easier to work with raw data sets.
+Transform query results into other storage formats, such as Parquet and ORC. This improves query performance and reduces query costs in Athena. For information, see [Columnar Storage Formats](https://docs.aws.amazon.com/athena/latest/ug/columnar-storage.html).
+Create copies of existing tables that contain only the data you need.
+
+### Create an Amazon S3 Bucket
+
+1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
+2. On the S3 Dashboard, Click on **Create Bucket**. 
+
+![createbucket.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucket.png)
+
+3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
+
+    1. Select the region as **Oregon**. 
+    2. Click **Next** to navigate to next tab. 
+    3. In the **Set properties** tab, leave all options as default. 
+    4. In the **Set permissions** tag, leave all options as default.
+    5. In the **Review** tab, click on **Create Bucket**
+
+![createbucketpopup.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucketpopup.png)
+
+### Repartitioning the dataset using CTAS Query 
+
+1. Ensure that current AWS region is **US West (Oregon)** region
+
+2. Ensure **mydatabase** is selected from the DATABASE list.
+ 
+3. Choose **New Query**, copy the following statement anywhere into the query pane, and then choose **Run Query**.
+
+```sql
+CREATE TABLE ctas_nytaxride_partitioned 
+WITH (
+     format = 'PARQUET', 
+     external_location = 's3://<name-of-the-bucket-your-created>/ctas_nytaxride_partitioned/', 
+     partitioned_by = ARRAY['month','type','vendorid']
+     ) 
+AS select 
+    ratecode, passenger_count, trip_distance, fare_amount, total_amount, month, type, vendorid
+FROM nytaxirides where year = 2016 and (vendorid = '1' or vendorid = '2')
+```
+
+Go the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
+
+>**Note:**
+> Please delete the Amazon S3 location specified as the external location before retrying the query. Donot delete the Amazon S3 bucket.
+
+### Repartitioning and Bucketing the dataset using CTAS Query 
+
+4. Choose **New Query**, copy the following statement anywhere into the query pane, and then choose **Run Query**.
+
+```sql
+CREATE TABLE ctas_nytaxride_bucketed_partitioned 
+WITH (
+     format = 'PARQUET', 
+     external_location = 's3://<name-of-the-bucket-your-created>/ctas_nytaxride_bucketed/', 
+     partitioned_by = ARRAY['month', 'type'],
+     bucketed_by = ARRAY['vendorid'],
+     bucket_count = 3) 
+AS select 
+    ratecode, passenger_count, trip_distance, fare_amount, total_amount,vendorid, month, type
+FROM nytaxirides where year = 2016 
+```
+
+Go the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
+
+>**Note:**
+> Please delete the Amazon S3 location specified as the external location before retrying the query. Donot delete the Amazon S3 bucket.
 ---
+
+Please refer to [Partitioning Vs. Bucketing](https://docs.aws.amazon.com/athena/latest/ug/bucketing-vs-partitioning.html) for more details.
 
 ## License
 
