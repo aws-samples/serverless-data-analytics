@@ -8,6 +8,7 @@
     * [Create Athena Table with Partitions](#create-a-table-with-partitions)
     * [Adding partition metadata to Amazon Athena](#adding-partition-metadata-to-amazon-athena)
     * [Querying partitioned data set](#querying-partitioned-data-set)
+* [Creating Views with Amazon Athena](#creating-views-with-amazon-athena)
     
 ## Architectural Diagram
 ![architecture-overview-lab1.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/Screen+Shot+2017-11-17+at+1.11.18+AM.png)
