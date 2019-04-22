@@ -376,6 +376,9 @@ AS select
 FROM nytaxirides where year = 2016 
 ```
 
+>**Note:**
+> This query will take approximately 6 minutes.
+
 Go the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
 
 >**Note:**
