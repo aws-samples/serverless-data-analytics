@@ -267,6 +267,41 @@ Now the execution time is ~ 3 second, as the amount of data scanned by the query
 Results for the above query look like the following:
 
 ![athenapercentilequery-nytaxi.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/athenapercentilequery-nytaxi.png)
+
+
+## Creating Views with Amazon Athena
+
+A view in Amazon Athena is a logical, not a physical table. The query that defines a view runs each time the view is referenced in a query. You can create a view from a SELECT query and then reference this view in future queries. For more information, see [CREATE VIEW](https://docs.aws.amazon.com/athena/latest/ug/create-view.html).
+
+1. Ensure that current AWS region is **US West (Oregon)** region
+
+2. Ensure **mydatabase** is selected from the DATABASE list.
+ 
+3. Choose **New Query**, copy the following statement anywhere into the query pane, and then choose **Run Query**.
+
+```sql
+CREATE VIEW nytaxiridesmonthly AS
+SELECT 
+    year,
+    month,
+    vendorid,
+    avg(total_amount) as avg_Amt,
+    sum (total_amount) as sum_Amt
+FROM nytaxirides
+where total_amount > 0
+group by vendorid, year, month
+```
+
+You will see a new view called **nytaxiridesmonthly** created under **Views** under **Database** section in the left.
+
+4. Choose **New Query**, copy the following statement anywhere into the query pane, and then choose **Run Query**.
+
+```sql
+SELECT * FROM nytaxiridesmonthly WHERE vendorid = '1'
+```
+
+Some of the view specific commands to try out are [SHOW COLUMNS](https://docs.aws.amazon.com/athena/latest/ug/show-columns.html), [SHOW CREATE VIEW](https://docs.aws.amazon.com/athena/latest/ug/show-create-view.html), [DESCRIBE VIEW](https://docs.aws.amazon.com/athena/latest/ug/describe-view.html), and [DROP VIEW](https://docs.aws.amazon.com/athena/latest/ug/drop-view.html).
+
 ---
 
 ## License
