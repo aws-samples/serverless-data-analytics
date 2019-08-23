@@ -19,7 +19,7 @@
 
 ## Creating Amazon Athena Database and Table 
 
-Amazon Athena uses Apache Hive to define tables and create databases. Databases are a logical grouping of tables. When you create a database and table in Athena, you are simply describing the schema and location of the table data in Amazon S3\. In case of Hive, databases and tables don’t store the data along with the schema definition unlike traditional relational database systems. The data is read from Amazon S3 only when you query the table. The other benefit of using Hive is that the metastore found in Hive can be used in many other big data applications such as Spark, Hadoop, and Presto. With Athena catalog, you can now have Hive-compatible metastore in the cloud without the need for provisioning a Hadoop cluster or RDS instance. For guidance on databases and tables creation refer [Apache Hive documentation](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL). The following steps provides guidance specifically for Amazon Athena.
+Amazon Athena uses Apache Hive to define tables and create databases. Databases are a logical grouping of tables. When you create a database and table in Athena, you are simply describing the schema and location of the table data in Amazon S3\. In case of Hive, databases and tables don’t store the data along with the schema definition unlike traditional relational database systems. The data is read from Amazon S3 only when you query the table. The other benefit of using Hive is that the metastore found in Hive can be used in many other big data applications such as Spark, Hadoop, and Presto. With Athena catalog, you can now have Hive-compatible metastore in the cloud without the need for provisioning a Hadoop cluster or RDS instance. For guidance on databases and tables creation refer [Apache Hive documentation](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL). The following steps provide guidance specifically for Amazon Athena.
 
 ### Create Database
 
@@ -357,7 +357,7 @@ FROM nytaxirides where year = 2016 and (vendorid = '1' or vendorid = '2')
 Go the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
 
 >**Note:**
-> Please delete the Amazon S3 location specified as the external location before retrying the query. Donot delete the Amazon S3 bucket.
+> Please delete the Amazon S3 location specified as the external location before retrying the query. Do not delete the Amazon S3 bucket.
 
 ### Repartitioning and Bucketing the dataset using CTAS Query 
 
@@ -382,7 +382,7 @@ FROM nytaxirides where year = 2016
 Go the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
 
 >**Note:**
-> Please delete the Amazon S3 location specified as the external location before retrying the query. Donot delete the Amazon S3 bucket.
+> Please delete the Amazon S3 location specified as the external location before retrying the query. Do not delete the Amazon S3 bucket.
 
 Please refer to [Partitioning Vs. Bucketing](https://docs.aws.amazon.com/athena/latest/ug/bucketing-vs-partitioning.html) for more details.
 
