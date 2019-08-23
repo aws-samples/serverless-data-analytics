@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you are going to build a serverless architecture to analyze the data directly from Amazon S3 using [Amazon Athena](https://aws.amazon.com/athena/) and visualize the data in [Amazon QuickSight](https://quicksight.aws/). The data set that you are going to use is a public data set that includes trip records from all trips completed in Yellow and Green taxis in NYC from 2009 to 2016, and all trips in for-hire vehicles (FHV) from 2015 to 2016\. Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data set is already partitioned and converted from CSV to Apache Parquet. In the first part of the lab you will be building SQL like queries using Amazon Athena to query both the data formats directly form Amazon S3 and comparing the query performance. In the second part, using Amazon Athena table, create in first part, as the data source for Amazon QuickSight you will generate visualization and meaningful insights from the data set in Amazon S3. An optional lab is included to incorporate serverless ETL using AWS Glue to optimize query performance. We also give you access to a take-home lab for you to reapply the same design and directly query the same dataset in Amazon S3 from an Amazon Redshift data warehouse using Redshift Spectrum\.
+In this lab, you are going to build a serverless architecture to analyze the data directly from Amazon S3 using [Amazon Athena](https://aws.amazon.com/athena/) and visualize the data in [Amazon QuickSight](https://quicksight.aws/). The data set that you are going to use is a public data set that includes trip records from all trips completed in Yellow and Green taxis in NYC from 2009 to 2016, and all trips in for-hire vehicles (FHV) from 2015 to 2016\. Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data set is already partitioned and converted from CSV to Apache Parquet. In the first part of the lab you will be building SQL like queries using Amazon Athena. You will query both data formats directly from Amazon S3 and compare the query performance. In the second part of the lab, you will use Amazon QuickSight to generate visualizations and meaningful insights from the data set in Amazon S3 using Athena tables you create during the first part of the lab. An optional lab is included to incorporate serverless ETL using AWS Glue to optimize query performance. We also give you access to a take-home lab for you to reapply the same design and directly query the same dataset in Amazon S3 from an Amazon Redshift data warehouse using Redshift Spectrum\.
 
 ![architecture-overview.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/architectureoveriew.PNG)
 
@@ -12,9 +12,9 @@ In this lab, you are going to build a serverless architecture to analyze the dat
 
 ## AWS Console
 
-### Verifying your region in the AWS Management Console
+### Verifying your Region in the AWS Management Console
 
-With Amazon Ec2, you can place instances in multiple locations. Amazon EC2 locations are composed of regions that contain more that one Availability Zones. Regions are dispersed and located in separate geographic areas (US, EU, etc.). Availability Zones are distinct locations within a region. They are are engineered to be isolated from failures in other Availability Zones and to provide inexpensive, low-latency network connectivity to other Availability Zones in the same region.
+With Amazon EC2, you can place instances in multiple locations. Amazon EC2 locations are composed of regions that contain more than one Availability Zones. Regions are dispersed and located in separate geographic areas (US, EU, etc.). Availability Zones are distinct locations within a region. They are engineered to be isolated from failures in other Availability Zones and to provide inexpensive, low-latency network connectivity to other Availability Zones in the same region.
 
 By launching instances in separate regions, you can design your application to be closer to specific customers or to meet legal or other requirements. By launching instances in separate Availability Zones, you can protect your application from localized regional failures.
 
@@ -39,7 +39,7 @@ The AWS region name is always listed in the upper-right corner of the AWS Manage
 ---
 ## Labs
 
-### Pre-requisites
+### Prerequisites
 
 [Create a new AWS Account](https://aws.amazon.com/free/) if you don't have one. 
  
@@ -64,7 +64,7 @@ Amazon Athena helps you analyze data stored in Amazon S3\. You can use Athena to
 
 ### How do you access Amazon Athena?
 
-Amazon Athena can be accessed via the AWS management console and a JDBC driver. You can programmatically run queries, add tables or partitions using the [JDBC driver](http://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html). 
+Amazon Athena can be accessed via the AWS Management Console and a JDBC driver. You can programmatically run queries, add tables or partitions using the [JDBC driver](http://docs.aws.amazon.com/athena/latest/ug/connect-with-jdbc.html). 
 
 ### What is the underlying technology behind Amazon Athena?
 
