@@ -26,7 +26,7 @@
 
 ![createbucket.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucket.png)
 
-3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
+3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. It is advised to choose a large bucket name, with many random characters and numbers (no spaces). 
 
     1. Select the region as **Oregon**. 
     2. Click **Next** to navigate to next tab. 
@@ -44,12 +44,13 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 
 ![createbucket.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucket.png)
 
-3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. So it’s advised to choose a large bucket name, with many random characters and numbers (no spaces). 
-i.Select the region as **Oregon**. 
-ii. Click **Next** to navigate to next tab. 
-iii. In the **Set properties** tab, leave all options as default. 
-iv. In the **Set permissions** tag, leave all options as default.
-v. In the **Review** tab, click on **Create Bucket**
+1. In the **Create Bucket** pop-up page, input a unique **Bucket name**. It is advised to choose a large bucket name, with many random characters and numbers (no spaces). 
+
+    1. Select the region as **Oregon**. 
+    2. Click **Next** to navigate to next tab. 
+    3. In the **Set properties** tab, leave all options as default. 
+    4. In the **Set permissions** tag, leave all options as default.
+    5. In the **Review** tab, click on **Create Bucket**
 
 ![createbucketpopup.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucketpopup.png)
 
@@ -107,11 +108,11 @@ The returned result will contain information for the partitions that are added t
 
 ## Signing up for Amazon Quicksight Standard Edition
 
-1. Open the [AWS ManagementConsole for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
+1. Open the [AWS Management Console for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
 
 ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage1.PNG)
 
-2. If this is the first time you are accessing QuickSight, you will see a sign-uplanding page for QuickSight. 
+2. If this is the first time you are accessing QuickSight, you will see a sign-up landing page for QuickSight. 
 3. Click on **Sign up for QuickSight**.
 
 > **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
@@ -126,7 +127,7 @@ The returned result will contain information for the partitions that are added t
 
    i. Enter a unique **QuickSight account name.**
 
-   ii. Enter avalid email for **Notification email address**.
+   ii. Enter a valid email for **Notification email address**.
 
    iii. Just for this step, leave the **QuickSight capacity region **as **N.Virginia**. 
 
@@ -134,27 +135,27 @@ The returned result will contain information for the partitions that are added t
 
    v. **Click Finish**. 
 
-   vi. You will be presented with a with message **Congratulations**! **You are signed up for Amazon QuickSight! **on successful sign up. Click on **Go to Amazon QuickSight**. 
+   vi. You will be presented with a message **Congratulations**! **You are signed up for Amazon QuickSight!** on successful sign up. Click on **Go to Amazon QuickSight**. 
 
 ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage4.PNG)
 
 6. On the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage5.PNG)
+<p align="center"><img src="img/updated1.png" /></p> 
 
-7. In this section, click on **Account Settings**.
-8. Under Account Settings, in **Account Permissions** Click **Edit AWS Permissions**.
+7. In this section, click on **Security & permissions** and then click **Add or remove**.
+
+8. Click on **Amazon S3** and on the tab that says **S3 buckets linked to QuickSight account**.
+9. Ensure **Select All** is checked.
+10. Click on **Select buckets**.
 
 ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage6.PNG)
 
-9. Check the box for **Amazon S3** and you will see a pop-up to select Amazon S3 buckets.
-10. Ensure **Select All **is checked.
-11. Click on **Select buckets**.
+11. Now, select the **S3 Buckets you can access across AWS** tab. Make sure **Use a different bucket** is selected. Insert _us-west-2.serverless-analytics_ as the bucket name and select **Add S3 bucket**. It should look similar to below:
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage7.PNG)
+<p align="center"><img src="img/updated2.png" /></p> 
 
-12. Check the box for **Amazon S3 Storage Analytics**[Optional].
-13. Click **Apply**.
+12. When you are done doing all this, click **Update** to bring you back to the user settings back.
 
 ## Configuring Amazon QuickSight to use Amazon Athena as data source
 
