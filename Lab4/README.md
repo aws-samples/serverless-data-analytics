@@ -2,7 +2,7 @@
 
 * [Deploying Amazon Redshift Cluster](#deploying-amazon-redshift-cluster)
 * [Running AWS Glue Crawlers](#running-aws-glue-crawlers---csv--parquet-crawler)
-* [Create Redshift Spectrum Scehma and reference external table form AWS Glue Data Catalog Database](#create-redshift-spectrum-scehma-and-reference-external-table-form-aws-glue-data-catalog-database)
+* [Create Redshift Spectrum Scehma and reference external table from AWS Glue Data Catalog Database](#create-redshift-spectrum-scehma-and-reference-external-table-form-aws-glue-data-catalog-database)
 * [Querying data from Amazon S3 using Amazon Redshift Spectrum](#querying-data-from-amazon-s3-using-amazon-redshift-spectrum)
 * [Querying partitioned data using Amazon Redshift Spectrum](#querying-partitioned-data-using-amazon-redshift-spectrum)
 
@@ -65,7 +65,7 @@ In this section you will use the CloudFormation template to create Amazon RedShi
 17. Ensure that status of the Amazon CloudFormation stack that you just created is **CREATE_COMPLETE**
 18. Select your Amazon CloudFormation stack *(RedshiftSpectrumLab)*
 19. Click on the **Outputs** tab
-20. Review the list of **Key** and thier **Value** which will look like the following. 
+20. Review the list of **Key** and **Value** pairs, which will look like the following. 
 
 ![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.30.42+PM.png)
 
@@ -75,20 +75,20 @@ In this section you will use the CloudFormation template to create Amazon RedShi
 
 ![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/Screen+Shot+2017-11-17+at+3.02.35+AM.png)
 
-3. Select the AWS Glue Crawler for CSV(e.g. csvCrawler)
+3. Select the AWS Glue Crawler for CSV (e.g. csvCrawler)
 4. Click **Run crawler**
-5. Select the AWS Glue Crawler for CSV(e.g. csvCrawler)
+5. Select the AWS Glue Crawler for Parquet (e.g. parquetCrawler)
 6. Click **Run crawler**
 
 > Note: This may take approximately 5 min for both the crawlers to parse the data in CSV and Parquet format. 
 
 ![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.08.23+PM.png)
 
-7. Wait for the **Status** of both the crawlers to *Ready* state
+7. Wait for the **Status** of both the crawlers to return to the *Ready* state
 
-Now that you have run the crawlers lest ensure that new tables *taxi* and *ny_pub* been created. 
+Now that you have run the crawlers lets ensure that new tables *taxi* and *ny_pub* been created. 
 
-8. To to the list of databases in the AWS Glue Data Catalog click on **Databases** in the navigation pane.
+8. Go to the list of databases in the AWS Glue Data Catalog by clicking on **Databases** in the navigation pane.
 9. Click on **taxi-spectrum-db**
 
 ![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+11.09.32+PM.png)
@@ -108,13 +108,13 @@ Now that you have run the crawlers lest ensure that new tables *taxi* and *ny_pu
 >**Note:**
 > The major advantage of Glue Crawlers is that they understand the partitions based on the S3 object prefix and automatically create the table with partitions as part of the crawling. 
 
-## Create Redshift Spectrum Scehma and reference external table form AWS Glue Data Catalog Database
+## Create Redshift Spectrum Scehma and reference external table from AWS Glue Data Catalog Database
 
 1. Open the [Amazon CloudFormation Dashboard](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2]) 
 2. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
 3. Select your Amazon CloudFormation stack *(RedshiftSpectrumLab)*
 4. Click on the **Outputs** tab
-5. Naviage to the **pgWeb** URL
+5. Navigate to the **pgWeb** URL
 6. In the pgWeb console ensure that the **SQL Query** tab is selected
 7. Copy the following statement to create a database *(e.g. taxispectrum)* in Redshift Spectrum
 
@@ -124,12 +124,12 @@ Now that you have run the crawlers lest ensure that new tables *taxi* and *ny_pu
   iam_role '<specify the redshift IAM Role arn from the CloudFormation outputs section>'
 ```
 8. Replace the *<specify the redshift IAM Role arn from the CloudFormation output section'>* in the statment with the value of **redshiftIAMRole** from the **Outputs** tab of the Amazon CloudFromation stack *(RedshiftSpectrumLab)* you created as part of the lab.
-9. 
+
 > Note: The IAM role must be in single quotes
 
 9. Click **Run Query**
 
-> Note: You can create an external table in Amazon Redshift, AWS Glue, Amazon Athena, or an Apache Hive metastore. For more information, see [Getting Started Using AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/getting-started.html) in the AWS Glue Developer Guide, [Getting Started](http://docs.aws.amazon.com/athena/latest/ug/getting-started.html) in the Amazon Athena User Guide, or [Apache Hive](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hive.html) in the Amazon EMR Developer Guide.If your external table is defined in AWS Glue, Athena, or a Hive metastore, you first create an external schema that references the external database. Then you can reference the external table in your SELECT statement by prefixing the table name with the schema name, without needing to create the table in Amazon Redshift. For more information, see [Creating External Schemas for Amazon Redshift Spectrum](http://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-external-schemas.html.)
+> Note: You can create an external table in Amazon Redshift, AWS Glue, Amazon Athena, or an Apache Hive metastore. For more information, see [Getting Started Using AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/getting-started.html) in the AWS Glue Developer Guide, [Getting Started](http://docs.aws.amazon.com/athena/latest/ug/getting-started.html) in the Amazon Athena User Guide, or [Apache Hive](http://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-hive.html) in the Amazon EMR Developer Guide. If your external table is defined in AWS Glue, Athena, or a Hive metastore, you first create an external schema that references the external database. Then you can reference the external table in your SELECT statement by prefixing the table name with the schema name, without needing to create the table in Amazon Redshift. For more information, see [Creating External Schemas for Amazon Redshift Spectrum](http://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-external-schemas.html.)
 
 ## Querying data from Amazon S3 using Amazon Redshift Spectrum
 
@@ -248,11 +248,11 @@ Results for the above query look like the following:
 Now that you have successfully queried the dataset using Amazon Redshift Spectrum, you need to tear down the stack that you deployed using the Amazon CloudFormation template.
 
 1. Open the [Amazon CloudFormation Dashboard](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2) 
-2. Enable the check box next to the name of the stack *(e.g. RedshiftSpectrumLab)* that you deployed at the beginingo fo the Lab. 
+2. Enable the check box next to the name of the stack *(e.g. RedshiftSpectrumLab)* that you deployed at the beginning of the Lab. 
 3. Click on **Actions** drop down button.
-4. Select **Delete Stack**'
+4. Select **Delete Stack**.
 5. Click **Yes, Delete** on the *Delete Stack* pop dialog
-6. Ensure that Amazon CloudFromation stack name *(e.g. RedshiftSpectrumLab)* is no longer showing in the list of stacks.
+6. Ensure that Amazon CloudFormation stack name *(e.g. RedshiftSpectrumLab)* is no longer showing in the list of stacks.
 
 ---
 ## License
