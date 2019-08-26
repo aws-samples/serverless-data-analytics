@@ -37,7 +37,7 @@ In this section you will use the CloudFormation template to create Amazon RedShi
 
 10.  Enter the following **Parameters** for **Redshift Database Configuration**.
     1. Type a name (e.g. dbadmin) for **MasterUserName**.
-    2. Type a password for **MasterUserPassword**. Make sure this password has at least 1 upper case letter. 
+    2. Type a password for **MasterUserPassword**. Make sure this password has at least 1 uppercase letter, 1 lowercase letter, and 1 number. 
     3. Type the a name (e.g. taxidb) for **DatabaseName**.
     4. Type the IP address of your local machine for **ClientIP**.
 
