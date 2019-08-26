@@ -13,9 +13,9 @@
 
 ## Create an IAM Role
 
-Create an IAM role that has permission to your Amazon S3 sources, targets, temporary directory, scripts, **AWSGlueServiceRole** and any libraries used by the job. You can click [here](https://console.aws.amazon.com/iam/home?region=us-west-2#/roles) to create a new role. For additional documentation to create a role [here](docs.aws.amazon.com/cli/latest/reference/iam/create-role.html).
+Create an IAM role that has permission to your Amazon S3 sources, targets, temporary directory, scripts, **AWSGlueServiceRole** and any libraries used by the job. You can click [here](https://console.aws.amazon.com/iam/home?region=us-west-2#/roles) to create a new role. For additional documentation to create a role click [here](docs.aws.amazon.com/cli/latest/reference/iam/create-role.html).
 
-1. On the IAM Page, click on **Create Role**.
+1. On the IAM page, click on **Create Role**.
 2. Choose the service as **Glue** and click on **Next: Permissions** on the bottom.
 3. On the Attach permissions policies, search policies for S3 and check the box for **AmazonS3FullAccess**. 
 
@@ -32,7 +32,7 @@ Create an IAM role that has permission to your Amazon S3 sources, targets, tempo
 nycitytaxianalysis-reinv
 ```
 
-​	and click Finish.
+​	and click **Create role**.
 
 ## Create an Amazon S3 bucket
 
@@ -49,11 +49,11 @@ nycitytaxianalysis-reinv
 
    and it would be easier to choose/select this bucket for the remainder of this Lab3. 
 
-   i.Select the region as **Oregon**. 
-   ii. Click **Next** to navigate to next tab. 
-   iii. In the **Set properties** tab, leave all options as default. 
-   iv. In the **Set permissions** tag, leave all options as default.
-   v. In the **Review** tab, click on **Create Bucket**
+   1. Select the region as **Oregon**. 
+   2. Click **Next** to navigate to the next tab. 
+   3. In the **Set properties** tab, leave all options as default. 
+   4. In the **Set permissions** tag, leave all options as default.
+   5. In the **Review** tab, click on **Create Bucket**
 
 ![createbucketpopup.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucketpopup.png)
 
