@@ -12,20 +12,13 @@
 
 ## Deploying Amazon Redshift Cluster 
 
-In this section you will use the CloudFromation template to create Amazon RedShift cluster resources. The template will also install [pgweb](https://github.com/sosedoff/pgweb), SQL Client for PostgreSQL, in an  Amazon EC2 instance to connect and run your queries on the launched Amazon Redshift cluster. Alternatively, you can connect to the Amazon Redshift cluster using standard SQL Clients such as SQL Workbench/J. For more information refer http://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html.
+In this section you will use the CloudFormation template to create Amazon RedShift cluster resources. The template will also install [pgweb](https://github.com/sosedoff/pgweb), an SQL Client for PostgreSQL, in an  Amazon EC2 instance to connect and run your queries on the launched Amazon Redshift cluster. Alternatively, you can connect to the Amazon Redshift cluster using standard SQL Clients such as SQL Workbench/J. For more information refer http://docs.aws.amazon.com/redshift/latest/mgmt/connecting-using-workbench.html.
 
 1. Login in to your AWS console and open the [Amazon CloudFormation Dashboard](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2]) 
 2. Make a note of the AWS region name, for example, for this lab you will need to choose the **US West (Oregon)** region.
 3. Click **Create Stack**
-4. Select **Specify an Amazon S3 template URL**
-5. Copy paste the following S3 template URL in the text box
-```
-https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/us-west-2.serverless-data-analytics/labcontent/redshiftspectrumglue-lab4.template
-```
+4. Copy the contents of the file here [redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template) and save it to your local machine as **redshiftspectrumglue-lab4.json**. This file is the Amazon CloudFormation template file. Select **Upload a template file** and upload this file by clicking **Choose file**. 
 6. Click **Next**
-
->**Note:** 
->Click on the link [redshiftspectrumglue-lab4.template](../Lab4/redshiftspectrumglue-lab4.template) to view the Amazon CloudFormation template file
 
 
 ![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.08+PM.png)
@@ -38,22 +31,22 @@ https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/us-west-2.serverles
     
     1. Choose *multi-node* for **ClusterType**
     2. Type *2* for the **NumberOfNodes**
-    3. For **NodeType** select *dc1.xlarge*
+    3. For **NodeType** select *dc1.large*
 
 ![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.38.57+PM.png)
 
 10.  Enter the following **Parameters** for **Redshift Database Configuration**.
-    i. Type a name (e.g. dbadmin) for **MasterUserName**.
-    ii. Type a password for **MasterUserPassword**.
-    iii. Type the a name (e.g. taxidb) for **DatabaseName**.
-    iv. Type the IP address of your local machine for **ClientIP**.
+    1. Type a name (e.g. dbadmin) for **MasterUserName**.
+    2. Type a password for **MasterUserPassword**. Make sure this password has at least 1 upper case letter. 
+    3. Type the a name (e.g. taxidb) for **DatabaseName**.
+    4. Type the IP address of your local machine for **ClientIP**.
 
 ![IMAGE](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab4/Screen+Shot+2017-11-16+at+7.39.23+PM.png)
 
 11. Enter the following **Parameters** for **Glue Crawler Configuration**
-    1. Type the name(e.g. taxi-spectrum-db) for **GlueCatalogDBName**.    
-    2. Type the name(e.g. csvCrawler) for **CSVCrawler**.
-    3. Type the name(e.g. parquetCrawler) for **ParquetCrawler**.
+    1. Type the name (e.g. taxi-spectrum-db) for **GlueCatalogDBName**.    
+    2. Type the name (e.g. csvCrawler) for **CSVCrawler**.
+    3. Type the name (e.g. parquetCrawler) for **ParquetCrawler**.
     
 12. Click **Next**
 
@@ -69,7 +62,7 @@ https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/us-west-2.serverles
 
 > **Note:** This is may take approximately 15 minutes 
 
-17. Ensure that status of the Amazon CloudFromation stack that you just create is **CREATE_COMPLETE**
+17. Ensure that status of the Amazon CloudFormation stack that you just created is **CREATE_COMPLETE**
 18. Select your Amazon CloudFormation stack *(RedshiftSpectrumLab)*
 19. Click on the **Outputs** tab
 20. Review the list of **Key** and thier **Value** which will look like the following. 
