@@ -354,10 +354,7 @@ AS select
 FROM nytaxirides where year = 2016 and (vendorid = '1' or vendorid = '2')
 ```
 
-Go the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
-
->**Note:**
-> Please delete the Amazon S3 location specified as the external location before retrying the query. Do not delete the Amazon S3 bucket.
+Go to the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
 
 ### Repartitioning and Bucketing the dataset using CTAS Query 
 
@@ -379,10 +376,7 @@ FROM nytaxirides where year = 2016
 >**Note:**
 > This query will take approximately 6 minutes.
 
-Go the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
-
->**Note:**
-> Please delete the Amazon S3 location specified as the external location before retrying the query. Do not delete the Amazon S3 bucket.
+Go to the Amazon S3 bucket specified as the external location and inspect the format and key structure in which the new objects are written in.
 
 Please refer to [Partitioning Vs. Bucketing](https://docs.aws.amazon.com/athena/latest/ug/bucketing-vs-partitioning.html) for more details.
 
