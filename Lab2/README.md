@@ -117,11 +117,9 @@ The returned result will contain information for the partitions that are added t
 
 > **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage2.PNG)
-
 4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage3.PNG)
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage2.PNG)
 
 5. On the next page,
 
@@ -129,21 +127,23 @@ The returned result will contain information for the partitions that are added t
 
    ii. Enter a valid email for **Notification email address**.
 
-   iii. Just for this step, leave the **QuickSight capacity region **as **N.Virginia**. 
+   iii. Just for this step, leave the **QuickSight capacity region** as **N.Virginia**. 
 
    iv. Ensure that **Enable autodiscovery of your data and users in your Amazon Redshift, Amazon RDS and AWS IAM Services** and **Amazon Athena** boxes are checked. 
 
    v. **Click Finish**. 
 
-   vi. You will be presented with a message **Congratulations**! **You are signed up for Amazon QuickSight!** on successful sign up. Click on **Go to Amazon QuickSight**. 
+   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage3.PNG)
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage4.PNG)
+   vi. You will be presented with a message **Congratulations**! **You are signed up for Amazon QuickSight!** on successful sign up. Click on **Go to Amazon QuickSight**. 
 
 6. On the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
-<p align="center"><img src="img/updated1.png" /></p> 
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage4.PNG)
 
 7. In this section, click on **Security & permissions** and then click **Add or remove**.
+
+<p align="center"><img src="img/updated1.png" /></p> 
 
 8. Click on **Amazon S3** and on the tab that says **S3 buckets linked to QuickSight account**.
 9. Ensure **Select All** is checked.
@@ -151,7 +151,7 @@ The returned result will contain information for the partitions that are added t
 
 ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage6.PNG)
 
-11. Now, select the **S3 Buckets you can access across AWS** tab. Make sure **Use a different bucket** is selected. Insert _us-west-2.serverless-analytics_ as the bucket name and select **Add S3 bucket**. It should look similar to below:
+11. Now, select the **S3 Buckets you can access across AWS** tab on the top right. Make sure **Use a different bucket** is selected. Insert _us-west-2.serverless-analytics_ as the bucket name and select **Add S3 bucket**. It should look similar to below:
 
 <p align="center"><img src="img/updated2.png" /></p> 
 
@@ -165,18 +165,20 @@ The returned result will contain information for the partitions that are added t
 
 1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
 
+2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
+
 ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage9.PNG)
 
-2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
-
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage10.PNG)
 
 4. Select **Athena** as a Data source.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage11.PNG)
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage10.PNG)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
+
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage11.PNG)
+
 6. Click **Create data source**.
 7. Select the **mydatabase** database.
 
@@ -186,8 +188,6 @@ The returned result will contain information for the partitions that are added t
 9. Choose **Edit/Preview** data.
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
-
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage13.PNG)
 
 10. Under **Fields** on the left column, choose **New field**
 
@@ -201,7 +201,7 @@ The returned result will contain information for the partitions that are added t
 
     v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime filed** based on the specified formula.
 
-
+    ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage13.PNG)
 
 11. Choose **Save and Visualize** on top of the page.
 
@@ -211,22 +211,19 @@ Now that you have configured the data source and created a new filed to represen
 
 ### Add year based filter to visualize the dataset for the year 2016
 
-
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage14.PNG)
-
 1. Ensure that current AWS region is **US West (Oregon)** region.
 
 2. Under the **Fields List**, select the **year** field to show the distribution of fares per year.
 
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage14.PNG)
+
 3. To reformat the **year** without comma
 
-   i. Select the dropdown arrow for the **year **field.
+   i. Select the dropdown arrow for the **year** field.
 
-   ii. Select **Format 1,234.5678 **from the dropdown menu.
+   ii. Select **Format 1,234.5678** from the dropdown menu.
 
    iii. Select **1235**.
-
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage15.PNG)
 
 4. To add a filter on the **year** filed, 
 
@@ -234,7 +231,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field** from the dropdown menu.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage16.PNG)
+   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage15.PNG)
 
 5. To filter the data only for the year 2016
 
@@ -250,9 +247,9 @@ Now that you have configured the data source and created a new filed to represen
   
    vi. Click **Close**.
 
-### Add the month based filter for the month of January
+   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage16.PNG)
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage17.PNG)
+### Add the month based filter for the month of January
 
 1. Ensure that current AWS region is **US West(Oregon)** region.
 2. Select **Visualize** from the navigation menu in the left-hand corner.
@@ -265,7 +262,7 @@ Now that you have configured the data source and created a new filed to represen
 
    ii. Select **Add filter to the field**.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage18.PNG)
+   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage17.PNG)
 
 6. To filter the data for month of January 2016 (Month 1),
 
@@ -281,9 +278,9 @@ Now that you have configured the data source and created a new filed to represen
  
    vi. Click **Close**.
 
-### Visualize the data by hour of day for the month of January 2016
+   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage18.PNG)
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage19.PNG)
+### Visualize the data by hour of day for the month of January 2016
 
 1. Select **Visualize** from the navigation menu in the left-hand corner.
 2. Under the **Fields list**, deselect **month** by clicking on **month** field name.
@@ -291,26 +288,28 @@ Now that you have configured the data source and created a new filed to represen
 4. Change the visual type to a line chart by selecting the line chart icon highlighted in the screenshot below under **Visual types**.
 5. Using the slider on x-axis, select the entire range [0,23] for **hourofday** field.
 
-### Visualize the data for the month of January 2016 for all taxi types(yellow, green, fhv)
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage19.PNG)
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage20.PNG)
+### Visualize the data for the month of January 2016 for all taxi types(yellow, green, fhv)
 
 1. Click on the double drop-down arrow underneath your username at the top-right corner of the page to reveal **X-axis**, **Value** and **Color** under **Field wells**.
 2. Under the **Fields list**, deselect **hourofday** by clicking on **hourofday** field name.
-3. Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime **field name from **Fields list**.
+3. Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime** field name from **Fields list**.
 4. Select **type** for Color by clicking on the **type** field name from **Fields list.**
 
 5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
 6. Select **Aggregate:Day** to aggregate by day.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage21.PNG)
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage20.PNG)
+
 8. Using the slider on x-axis, select the entire month of January 2016 for **pickup_datetime** field.
 
+![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage21.PNG)
 
 > Note: The interesting outlier in the above graph is that on Jan23rd, 2016, you see the dip in the number of taxis across all types. Doing a quick google search for that date, gets us this weather article from NBC New York
 > ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage22.PNG)
 
-*Using Amazon Qu.ickSight, you were able to see patterns across a time-series data by building visualizations, performing ad-hoc analysis, and quickly generating insights.*
+*Using Amazon QuickSight, you were able to see patterns across a time-series data by building visualizations, performing ad-hoc analysis, and quickly generating insights.*
 
 ---
 ## License

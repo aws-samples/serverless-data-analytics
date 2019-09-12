@@ -78,7 +78,7 @@ Amazon Athena uses Apache Hive DDL to define tables. You can run DDL statements 
 
 Amazon Athena supports a wide variety of data formats like CSV, TSV, JSON, or Textfiles and also supports open source columnar formats such as Apache ORC and Apache Parquet. Athena also supports compressed data in Snappy, Zlib, LZO, and GZIP formats. By compressing, partitioning, and using columnar formats you can improve performance and reduce your costs.
 
-For more details refer [Amazon Athena FAQ] (https://aws.amazon.com/athena/faqs/)
+For more details refer [Amazon Athena FAQ](https://aws.amazon.com/athena/faqs/).
 
 ## AMAZON QUICKSIGHT
 
@@ -94,7 +94,7 @@ Traditional BI solutions often require teams of data engineers to spend months b
 
 You can connect to AWS data sources including Amazon RDS, Amazon Aurora, Amazon Redshift, Amazon Athena and Amazon S3\. You can also upload Excel spreadsheets or flat files (CSV, TSV, CLF, and ELF), connect to on-premises databases like SQL Server, MySQL and PostgreSQL and import data from SaaS applications like Salesforce.
 
-For more details refer [Amazon QuickSight FAQ](https://quicksight.aws/resources/faq/)
+For more details refer [Amazon QuickSight FAQ](https://quicksight.aws/resources/faq/).
 
 ## Amazon Redshift Spectrum
 
@@ -121,7 +121,7 @@ If you have frequently accessed data, that needs to be stored in a consistent, h
 
 Yes, Redshift Spectrum can support the same Apache Hive Metastore used by Amazon EMR to locate data and table definitions. If you’re using Amazon EMR and have a Hive Metastore already, you just have to configure your Amazon Redshift cluster to use it. You can then start querying that data right away along with your Amazon EMR jobs.
 
-For more details refer [Amazon Redshift Spectrum FAQ](https://aws.amazon.com/redshift/faqs/) 
+For more details refer [Amazon Redshift Spectrum FAQ](https://aws.amazon.com/redshift/faqs/).
 
 ## AWS Glue
 
@@ -161,7 +161,7 @@ AWS Data Pipeline provides a managed orchestration service that gives you greate
 
 Furthermore, AWS Glue ETL jobs are PySpark based. If your use case requires you to use an engine other than Apache Spark or if you want to run a heterogeneous set of jobs that run on a variety of engines like Hive, Pig, etc., then AWS Data Pipeline would be a better choice.
 
-For more details refer [AWS Glue FAQ](https://aws.amazon.com/glue/faqs/) 
+For more details refer [AWS Glue FAQ](https://aws.amazon.com/glue/faqs/).
 
 ## **ADDITIONAL RESOURCES**
 
