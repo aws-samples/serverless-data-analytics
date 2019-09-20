@@ -137,7 +137,9 @@ The returned result will contain information for the partitions that are added t
 
    vi. You will be presented with a message **Congratulations**! **You are signed up for Amazon QuickSight!** on successful sign up. Click on **Go to Amazon QuickSight**. 
 
-6. **Before continuing with the following steps, make sure you are in the N. Virginia Region to edit permissions** Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
+6. **Before continuing with the following steps, make sure you are in the N. Virginia Region to edit permissions.**
+
+Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
 ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage4.PNG)
 
