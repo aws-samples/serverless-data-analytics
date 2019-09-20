@@ -137,7 +137,7 @@ The returned result will contain information for the partitions that are added t
 
    vi. You will be presented with a message **Congratulations**! **You are signed up for Amazon QuickSight!** on successful sign up. Click on **Go to Amazon QuickSight**. 
 
-6. On the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
+6. **Before continuing with the following steps, make sure you are in the N. Virginia Region to edit permissions** Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
 ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage4.PNG)
 
@@ -189,7 +189,7 @@ The returned result will contain information for the partitions that are added t
 
 > This is a crucial step. Please ensure you choose **Edit/Preview** data.
 
-10. Under **Fields** on the left column, choose **New field**
+10. Under **Fields** on the left column, choose **Add calculate field**
 
     i. Select the **extract** operation from Function list.
 
@@ -199,7 +199,7 @@ The returned result will contain information for the partitions that are added t
 
     iv. Type ‘HH’ so the Formula is **extract('HH',{pickup_datetime})**
 
-    v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime filed** based on the specified formula.
+    v. Choose **Create** to add a field which is calculated from an existing field. In this case, the **hourofday** field is calculated from the **pickup_datetime field** based on the specified formula.
 
     ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage13.PNG)
 
@@ -207,7 +207,7 @@ The returned result will contain information for the partitions that are added t
 
 ## Visualizing the data using Amazon QuickSight
 
-Now that you have configured the data source and created a new filed to represent the hour of the day, in this section you will filter the data by year followed by month to visualize the taxi data for the entire month of January 2016 based on the **pickup_datetime** field.
+Now that you have configured the data source and created a new field to represent the hour of the day, in this section you will filter the data by year followed by month to visualize the taxi data for the entire month of January 2016 based on the **pickup_datetime** field.
 
 ### Add year based filter to visualize the dataset for the year 2016
 
@@ -225,7 +225,7 @@ Now that you have configured the data source and created a new filed to represen
 
    iii. Select **1235**.
 
-4. To add a filter on the **year** filed, 
+4. To add a filter on the **year** field, 
 
    i. Select the dropdown for **year** field from the **Fields list**.
 
