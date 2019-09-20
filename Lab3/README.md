@@ -57,7 +57,7 @@ nycitytaxianalysis-reinv
 
 ![createbucketpopup.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucketpopup.png)
 
-2. Now, in this newly created bucket, create two sub-buckets **tmp** and **target** using the same instructions as the above step. We will use these buckets as part of Lab3 later on. 
+2. Now, in this newly created bucket, create two sub-folders **tmp** and **target** using the same instructions as the above step. We will use these buckets as part of Lab3 later on. 
 
 ## Discover the Data
 
