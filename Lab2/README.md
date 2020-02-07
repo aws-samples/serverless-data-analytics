@@ -119,7 +119,7 @@ The returned result will contain information for the partitions that are added t
 
 4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage2.PNG)
+![image](img/enterprise.png)
 
 5. On the next page,
 
