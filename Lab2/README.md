@@ -117,7 +117,7 @@ The returned result will contain information for the partitions that are added t
 
 > **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
 
-4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
+4. On the next page, for the subscription type select the **"Enterprise Edition"** and click **Continue**. 
 
 ![image](img/enterprise.png)
 
@@ -133,7 +133,7 @@ The returned result will contain information for the partitions that are added t
 
    v. **Click Finish**. 
 
-   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage3.PNG)
+   ![image](img/new-account-fields.png)
 
    vi. You will be presented with a message **Congratulations**! **You are signed up for Amazon QuickSight!** on successful sign up. Click on **Go to Amazon QuickSight**. 
 
@@ -141,7 +141,7 @@ The returned result will contain information for the partitions that are added t
 
 Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage4.PNG)
+   ![image](img/quicksight-first-page.png)
 
 7. In this section, click on **Security & permissions** and then click **Add or remove**.
 
@@ -163,13 +163,13 @@ Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the T
 
 > For this lab, you will need to choose the **US West (Oregon)** region. 
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage8.PNG)
+![image](img/oregon.png)
 
 1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
 
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage9.PNG)
+![image](img/oregon-manage.png)
 
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
@@ -179,12 +179,12 @@ Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the T
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage11.PNG)
+![image](img/athena-ds.png)
 
 6. Click **Create data source**.
 7. Select the **mydatabase** database.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage12.PNG)
+![image](img/athena-table.png)
 
 8. Choose the **nytaxirides** table.
 9. Choose **Edit/Preview** data.
@@ -249,7 +249,7 @@ Now that you have configured the data source and created a new field to represen
   
    vi. Click **Close**.
 
-   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage16.PNG)
+![image](img/year-filter.png)
 
 ### Add the month based filter for the month of January
 
@@ -280,7 +280,7 @@ Now that you have configured the data source and created a new field to represen
  
    vi. Click **Close**.
 
-   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage18.PNG)
+![image](img/month-filter.png)
 
 ### Visualize the data by hour of day for the month of January 2016
 
