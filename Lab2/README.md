@@ -173,7 +173,7 @@ Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the T
 
 4. Select **Athena** as a Data source.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage10.PNG)
+![image](img/connectors.png)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 
