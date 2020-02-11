@@ -306,6 +306,25 @@ Now that you have configured the data source and created a new field to represen
 
 ![image](img/entire-month.png)
 
+### Forecast Monthly Number of Pickups Trend
+
+1. Create a new visual by clicking on **Add** in the top left corner and choosing **Add visual**.
+
+![image](img/new-visual.png)
+
+2. Under the **Fields list**, Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime** field name.
+3. Change the visual type to a line chart by selecting the line chart icon highlighted in the screenshot below under **Visual types**.
+4. Click on the field name **pickup_datetime** in top **Field Wells** bar to reveal a sub-menu.
+5. Select **Aggregate:Month** to aggregate by month.
+
+![image](img/prepare-forecast.png)
+
+6. Click arrow in top right corner of the visual and select **Add forecast**.
+
+![image](img/forecast.png)
+
+![image](img/end.png)
+
 > Note: The interesting outlier in the above graph is that on Jan23rd, 2016, you see the dip in the number of taxis across all types. Doing a quick google search for that date, gets us this weather article from NBC New York
 > ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage22.PNG)
 
