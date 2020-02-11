@@ -104,7 +104,7 @@ Now that you have created the table you need to add the partition metadata to th
 ```
 The returned result will contain information for the partitions that are added to NYTaxiRides for each taxi type (yellow, green, fhv) for every month for the year from 2009 to 2016
 
-## Signing up for Amazon Quicksight Standard Edition
+## Signing up for Amazon Quicksight Enterprise Edition
 
 1. Open the [AWS Management Console for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
 
