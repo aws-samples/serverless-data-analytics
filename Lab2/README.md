@@ -1,9 +1,10 @@
 # Lab 2: Visualization using Amazon QuickSight
-
+<!--
 * [Create an Amazon S3 bucket](#create-an-amazon-s3-bucket)
 * [Creating Amazon Athena Database and Table](#creating-amazon-athena-database-and-table)
     * [Create Athena Database](#create-database)
     * [Create Athena Table](#create-a-table)
+    -->
 * [Signing up for Amazon Quicksight Standard Edition](#signing-up-for-amazon-quicksight-standard-edition)
 * [Configuring Amazon QuickSight to use Amazon Athena as data source](#configuring-amazon-quicksight-to-use-amazon-athena-as-data-source)
 * [Visualizing the data using Amazon QuickSight](#visualizing-the-data-using-amazon-quicksight)
@@ -17,14 +18,14 @@
 ## Architectural Diagram
 ![architecture-overview-lab2.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/architecture-overview-lab2.png)
 
-
+<!--
 ## Create an Amazon S3 bucket
 > Note: If you have already have an S3 bucket in your AWS Account you can skip this section. 
 
 1. Open the [AWS Management console for Amazon S3](https://s3.console.aws.amazon.com/s3/home?region=us-west-2)
 2. On the S3 Dashboard, Click on **Create Bucket**. 
 
-![createbucket.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucket.png)
+![image](img/create-bucket.png)
 
 3. In the **Create Bucket** pop-up page, input a unique **Bucket name**. It is advised to choose a large bucket name, with many random characters and numbers (no spaces). 
 
@@ -42,17 +43,15 @@
 
 Amazon Athena uses Apache Hive to define tables and create databases. Databases are a logical grouping of tables. When you create a database and table in Athena, you are simply describing the schema and location of the table data in Amazon S3\. In case of Hive, databases and tables don’t store the data along with the schema definition unlike traditional relational database systems. The data is read from Amazon S3 only when you query the table. The other benefit of using Hive is that the metastore found in Hive can be used in many other big data applications such as Spark, Hadoop, and Presto. With Athena catalog, you can now have Hive-compatible metastore in the cloud without the need for provisioning a Hadoop cluster or RDS instance. For guidance on databases and tables creation refer [Apache Hive documentation](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL). The following steps provides guidance specifically for Amazon Athena.
 
-![createbucket.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucket.png)
+### Setting up Athena (first time users)
 
-1. In the **Create Bucket** pop-up page, input a unique **Bucket name**. It is advised to choose a large bucket name, with many random characters and numbers (no spaces). 
+If you’re a first time Athena user, you might need to configure an S3 bucket, where Athena will store the query results.
 
-    1. Select the region as **Oregon**. 
-    2. Click **Next** to navigate to next tab. 
-    3. In the **Set properties** tab, leave all options as default. 
-    4. In the **Set permissions** tag, leave all options as default.
-    5. In the **Review** tab, click on **Create Bucket**
+![image](../Lab1/img/athena-setup.png)
 
-![createbucketpopup.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab1/createbucketpopup.png)
+You can use an already existing bucket with a dedicated folder or you can create a new, dedicated bucket.
+
+<b>NOTE:</b> Make sure you have forward slash at the end of the S3 path
 
 ### Create Database
 
@@ -105,8 +104,8 @@ Now that you have created the table you need to add the partition metadata to th
     MSCK REPAIR TABLE NYTaxiRides
 ```
 The returned result will contain information for the partitions that are added to NYTaxiRides for each taxi type (yellow, green, fhv) for every month for the year from 2009 to 2016
-
-## Signing up for Amazon Quicksight Standard Edition
+-->
+## Signing up for Amazon Quicksight Enterprise Edition
 
 1. Open the [AWS Management Console for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
 
@@ -117,9 +116,9 @@ The returned result will contain information for the partitions that are added t
 
 > **Note:** Chrome browser might timeout at this step. If that's the case, try this step in Firefox/Microsoft Edge/Safari.
 
-4. On the next page, for the subscription type select the **"Standard Edition"** and click **Continue**. 
+4. On the next page, for the subscription type select the **"Enterprise Edition"** and click **Continue**. 
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage2.PNG)
+![image](img/enterprise.png)
 
 5. On the next page,
 
@@ -133,7 +132,7 @@ The returned result will contain information for the partitions that are added t
 
    v. **Click Finish**. 
 
-   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage3.PNG)
+   ![image](img/new-account-fields.png)
 
    vi. You will be presented with a message **Congratulations**! **You are signed up for Amazon QuickSight!** on successful sign up. Click on **Go to Amazon QuickSight**. 
 
@@ -141,7 +140,7 @@ The returned result will contain information for the partitions that are added t
 
 Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the Top-Right section and click **Manage QuickSight**.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage4.PNG)
+   ![image](img/quicksight-first-page.png)
 
 7. In this section, click on **Security & permissions** and then click **Add or remove**.
 
@@ -163,28 +162,28 @@ Now, on the Amazon QuickSight dashboard, navigate to User Settings page on the T
 
 > For this lab, you will need to choose the **US West (Oregon)** region. 
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage8.PNG)
+![image](img/oregon.png)
 
 1. Click on the region icon on the top-right corner of the page, and select **US West (Oregon)**. 
 
 2. Click on **Manage data** on the top-right corner of the webpage to review existing data sets.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage9.PNG)
+![image](img/oregon-manage.png)
 
 3. Click on **New data set** on the top-left corner of the webpage and review the options. 
 
 4. Select **Athena** as a Data source.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage10.PNG)
+![image](img/connectors.png)
 
 5. Enter the **Data source** **name** (e.g. *AthenaDataSource*).
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage11.PNG)
+![image](img/athena-ds.png)
 
 6. Click **Create data source**.
 7. Select the **mydatabase** database.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage12.PNG)
+![image](img/athena-table.png)
 
 8. Choose the **nytaxirides** table.
 9. Choose **Edit/Preview** data.
@@ -249,7 +248,7 @@ Now that you have configured the data source and created a new field to represen
   
    vi. Click **Close**.
 
-   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage16.PNG)
+![image](img/year-filter.png)
 
 ### Add the month based filter for the month of January
 
@@ -280,7 +279,7 @@ Now that you have configured the data source and created a new field to represen
  
    vi. Click **Close**.
 
-   ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage18.PNG)
+![image](img/month-filter.png)
 
 ### Visualize the data by hour of day for the month of January 2016
 
@@ -299,14 +298,33 @@ Now that you have configured the data source and created a new field to represen
 3. Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime** field name from **Fields list**.
 4. Select **type** for Color by clicking on the **type** field name from **Fields list.**
 
-5. Click on the field name **pickup_datetime** in x-axis to reveal a sub-menu.
+5. Click on the field name **pickup_datetime** in top **Field Wells** bar to reveal a sub-menu.
 6. Select **Aggregate:Day** to aggregate by day.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage20.PNG)
+![image](img/aggregate-by-day.png)
 
 8. Using the slider on x-axis, select the entire month of January 2016 for **pickup_datetime** field.
 
-![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage21.PNG)
+![image](img/entire-month.png)
+
+### Forecast Monthly Number of Pickups Trend
+
+1. Create a new visual by clicking on **Add** in the top left corner and choosing **Add visual**.
+
+![image](img/new-visual.png)
+
+2. Under the **Fields list**, Select **pickup_datetime** for x-axis by clicking on the **pickup_datetime** field name.
+3. Change the visual type to a line chart by selecting the line chart icon highlighted in the screenshot below under **Visual types**.
+4. Click on the field name **pickup_datetime** in top **Field Wells** bar to reveal a sub-menu.
+5. Select **Aggregate:Month** to aggregate by month.
+
+![image](img/prepare-forecast.png)
+
+6. Click arrow in top right corner of the visual and select **Add forecast**.
+
+![image](img/forecast.png)
+
+![image](img/end.png)
 
 > Note: The interesting outlier in the above graph is that on Jan23rd, 2016, you see the dip in the number of taxis across all types. Doing a quick google search for that date, gets us this weather article from NBC New York
 > ![image](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/qsimage22.PNG)
