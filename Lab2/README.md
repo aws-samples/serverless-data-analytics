@@ -1,9 +1,10 @@
 # Lab 2: Visualization using Amazon QuickSight
-
+<!--
 * [Create an Amazon S3 bucket](#create-an-amazon-s3-bucket)
 * [Creating Amazon Athena Database and Table](#creating-amazon-athena-database-and-table)
     * [Create Athena Database](#create-database)
     * [Create Athena Table](#create-a-table)
+    -->
 * [Signing up for Amazon Quicksight Standard Edition](#signing-up-for-amazon-quicksight-standard-edition)
 * [Configuring Amazon QuickSight to use Amazon Athena as data source](#configuring-amazon-quicksight-to-use-amazon-athena-as-data-source)
 * [Visualizing the data using Amazon QuickSight](#visualizing-the-data-using-amazon-quicksight)
@@ -17,7 +18,7 @@
 ## Architectural Diagram
 ![architecture-overview-lab2.png](https://s3.amazonaws.com/us-east-1.data-analytics/labcontent/reinvent2017content-abd313/lab2/architecture-overview-lab2.png)
 
-
+<!--
 ## Create an Amazon S3 bucket
 > Note: If you have already have an S3 bucket in your AWS Account you can skip this section. 
 
@@ -46,7 +47,7 @@ Amazon Athena uses Apache Hive to define tables and create databases. Databases 
 
 If you’re a first time Athena user, you might need to configure an S3 bucket, where Athena will store the query results.
 
-![image](img/athena-setup.png)
+![image](../Lab1/img/athena-setup.png)
 
 You can use an already existing bucket with a dedicated folder or you can create a new, dedicated bucket.
 
@@ -103,7 +104,7 @@ Now that you have created the table you need to add the partition metadata to th
     MSCK REPAIR TABLE NYTaxiRides
 ```
 The returned result will contain information for the partitions that are added to NYTaxiRides for each taxi type (yellow, green, fhv) for every month for the year from 2009 to 2016
-
+-->
 ## Signing up for Amazon Quicksight Enterprise Edition
 
 1. Open the [AWS Management Console for QuickSight](https://us-east-1.quicksight.aws.amazon.com/sn/start).
